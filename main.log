@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6880 64-bit) (preloaded format=pdflatex 2018.11.18)  27 NOV 2018 00:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6880 64-bit) (preloaded format=pdflatex 2018.11.18)  6 DEC 2018 01:21
 entering extended mode
 **d:/thesis-draft/main.tex
 (d:/thesis-draft/main.tex
@@ -343,6 +343,128 @@ Package: l3keys2e 2018-10-17 LaTeX2e option processing using LaTeX3 keys
 .sty"
 Package: translator 2018/01/04 v1.12 Easy translation of strings in LaTeX
 ))
+("C:\Users\HP\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\color.sty"
+Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
+
+("C:\Users\HP\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics-cfg\color.cf
+g"
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 147.
+)
+("C:\Users\HP\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\hyperref.sty
+"
+Package: hyperref 2018/09/30 v6.88a Hypertext links for LaTeX
+
+("C:\Users\HP\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\hobsub-hyp
+erref.sty"
+Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
+
+
+("C:\Users\HP\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\hobsub-gen
+eric.sty"
+Package: hobsub-generic 2016/05/16 v1.14 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2016/05/16 v1.14 Construct package bundles (HO)
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+Package hobsub Info: Skipping package `ifvtex' (already loaded).
+Package: intcalc 2016/05/16 v1.2 Expandable calculations with integers (HO)
+Package hobsub Info: Skipping package `ifpdf' (already loaded).
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+Package: pdftexcmds 2018/09/10 v0.29 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+Package: pdfescape 2016/05/16 v1.14 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2016/05/16 v1.4 Expandable calculations on big integers (HO
+)
+Package: bitset 2016/05/16 v1.2 Handle bit-vector datatype (HO)
+Package: uniquecounter 2016/05/16 v1.3 Provide unlimited unique counter (HO)
+)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2016/05/16 v1.5 Let assignment for LaTeX macros (HO)
+Package: hopatch 2016/05/16 v1.3 Wrapper for package hooks (HO)
+Package: xcolor-patch 2016/05/16 xcolor patch
+Package: atveryend 2016/05/16 v1.9 Hooks at the very end of document (HO)
+Package atveryend Info: \enddocument detected (standard20110627).
+Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
+Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
+Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
+)
+("C:\Users\HP\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\auxhook.sty"
+Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
+)
+("C:\Users\HP\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.st
+y"
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+)
+\@linkdim=\dimen160
+\Hy@linkcounter=\count199
+\Hy@pagecounter=\count266
+
+("C:\Users\HP\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\pd1enc.def"
+File: pd1enc.def 2018/09/30 v6.88a Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+\Hy@SavedSpaceFactor=\count267
+("C:\Users\HP\AppData\Local\Programs\MiKTeX 2.9\tex\latex\00miktex\hyperref.cfg
+"
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+Package hyperref Info: Hyper figures OFF on input line 4535.
+Package hyperref Info: Link nesting OFF on input line 4540.
+Package hyperref Info: Hyper index ON on input line 4543.
+Package hyperref Info: Plain pages OFF on input line 4550.
+Package hyperref Info: Backreferencing OFF on input line 4555.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4788.
+\c@Hy@tempcnt=\count268
+ ("C:\Users\HP\AppData\Local\Programs\MiKTeX 2.9\tex\latex\url\url.sty"
+\Urlmuskip=\muskip16
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 5141.
+\XeTeXLinkMargin=\dimen161
+\Fld@menulength=\count269
+\Field@Width=\dimen162
+\Fld@charsize=\dimen163
+Package hyperref Info: Hyper figures OFF on input line 6396.
+Package hyperref Info: Link nesting OFF on input line 6401.
+Package hyperref Info: Hyper index ON on input line 6404.
+Package hyperref Info: backreferencing OFF on input line 6411.
+Package hyperref Info: Link coloring OFF on input line 6416.
+Package hyperref Info: Link coloring with OCG OFF on input line 6421.
+Package hyperref Info: PDF/A mode OFF on input line 6426.
+LaTeX Info: Redefining \ref on input line 6466.
+LaTeX Info: Redefining \pageref on input line 6470.
+\Hy@abspage=\count270
+\c@Item=\count271
+\c@Hfootnote=\count272
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+
+("C:\Users\HP\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\hpdftex.def"
+File: hpdftex.def 2018/09/30 v6.88a Hyperref driver for pdfTeX
+\Fld@listcount=\count273
+\c@bookmark@seq@number=\count274
+
+("C:\Users\HP\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\rerunfileche
+ck.sty"
+Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+82.
+)
+\Hy@SectionHShift=\skip64
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 22.
+
 ("C:\Users\HP\AppData\Local\Programs\MiKTeX 2.9\tex\latex\glossaries\base\gloss
 aries.sty"
 Package: glossaries 2018/07/23 v4.41 (NLCT)
@@ -360,7 +482,7 @@ x"
 \XKV@toks=\toks20
 \XKV@tempa@toks=\toks21
 )
-\XKV@depth=\count199
+\XKV@depth=\count275
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
 ("C:\Users\HP\AppData\Local\Programs\MiKTeX 2.9\tex\latex\mfirstuc\mfirstuc.sty
@@ -370,7 +492,7 @@ Package: mfirstuc 2017/11/14 v2.06 (NLCT)
 ("C:\Users\HP\AppData\Local\Programs\MiKTeX 2.9\tex\latex\etoolbox\etoolbox.sty
 "
 Package: etoolbox 2018/08/19 v2.5f e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count266
+\etb@tempcnta=\count276
 )
 \@glsmfirst=\toks22
 \@glsmrest=\toks23
@@ -387,56 +509,56 @@ Package: datatool-base 2018/04/16 v2.30 (NLCT)
 
 ("C:\Users\HP\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
 Package: amsmath 2017/09/02 v2.17a AMS math features
-\@mathmargin=\skip64
+\@mathmargin=\skip65
 
 For additional information on amsmath, use the `?' option.
 ("C:\Users\HP\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen160
+\pmbraise@=\dimen164
 )
 ("C:\Users\HP\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count267
+\inf@bad=\count277
 LaTeX Info: Redefining \frac on input line 213.
-\uproot@=\count268
-\leftroot@=\count269
+\uproot@=\count278
+\leftroot@=\count279
 LaTeX Info: Redefining \overline on input line 375.
-\classnum@=\count270
-\DOTSCASE@=\count271
+\classnum@=\count280
+\DOTSCASE@=\count281
 LaTeX Info: Redefining \ldots on input line 472.
 LaTeX Info: Redefining \dots on input line 475.
 LaTeX Info: Redefining \cdots on input line 596.
 \Mathstrutbox@=\box50
 \strutbox@=\box51
-\big@size=\dimen161
+\big@size=\dimen165
 LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
-\macc@depth=\count272
-\c@MaxMatrixCols=\count273
-\dotsspace@=\muskip16
-\c@parentequation=\count274
-\dspbrk@lvl=\count275
+\macc@depth=\count282
+\c@MaxMatrixCols=\count283
+\dotsspace@=\muskip17
+\c@parentequation=\count284
+\dspbrk@lvl=\count285
 \tag@help=\toks24
-\row@=\count276
-\column@=\count277
-\maxfields@=\count278
+\row@=\count286
+\column@=\count287
+\maxfields@=\count288
 \andhelp@=\toks25
-\eqnshift@=\dimen162
-\alignsep@=\dimen163
-\tagshift@=\dimen164
-\tagwidth@=\dimen165
-\totwidth@=\dimen166
-\lineht@=\dimen167
+\eqnshift@=\dimen166
+\alignsep@=\dimen167
+\tagshift@=\dimen168
+\tagwidth@=\dimen169
+\totwidth@=\dimen170
+\lineht@=\dimen171
 \@envbody=\toks26
-\multlinegap=\skip65
-\multlinetaggap=\skip66
+\multlinegap=\skip66
+\multlinetaggap=\skip67
 \mathdisplay@stack=\toks27
 LaTeX Info: Redefining \[ on input line 2817.
 LaTeX Info: Redefining \] on input line 2818.
 ) ("C:\Users\HP\AppData\Local\Programs\MiKTeX 2.9\tex\latex\substr\substr.sty"
 Package: substr 2009/10/20 v1.2 Handle substrings
-\c@su@anzahl=\count279
+\c@su@anzahl=\count289
 )
 ("C:\Users\HP\AppData\Local\Programs\MiKTeX 2.9\tex\latex\datatool\datatool-fp.
 sty"
@@ -447,19 +569,19 @@ Package: fp 1995/04/02
 `Fixed Point Package', Version 0.8, April 2, 1995 (C) Michael Mehlich
 ("C:\Users\HP\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fp\defpattern.sty"
 Package: defpattern 1994/10/12
-\actioncount=\count280
+\actioncount=\count290
 )
 ("C:\Users\HP\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fp\fp-basic.sty"
 Package: fp-basic 1996/05/13
-\FP@xs=\count281
-\FP@xia=\count282
-\FP@xib=\count283
-\FP@xfa=\count284
-\FP@xfb=\count285
-\FP@rega=\count286
-\FP@regb=\count287
-\FP@regs=\count288
-\FP@times=\count289
+\FP@xs=\count291
+\FP@xia=\count292
+\FP@xib=\count293
+\FP@xfa=\count294
+\FP@xfb=\count295
+\FP@rega=\count296
+\FP@regb=\count297
+\FP@regs=\count298
+\FP@times=\count299
 )
 ("C:\Users\HP\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fp\fp-addons.sty"
 Package: fp-addons 1995/03/15
@@ -478,7 +600,7 @@ Package: fp-pas 1994/08/29
 )
 ("C:\Users\HP\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fp\fp-random.sty"
 Package: fp-random 1995/02/23
-\FPseed=\count290
+\FPseed=\count300
 )
 ("C:\Users\HP\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fp\fp-eqn.sty"
 Package: fp-eqn 1995/04/03
@@ -490,14 +612,14 @@ Package: fp-upn 1996/10/21
 Package: fp-eval 1995/04/03
 )))
 \@dtl@toks=\toks28
-\@dtl@tmpcount=\count291
-\dtl@tmplength=\skip67
-\dtl@sortresult=\count292
-\@dtl@numgrpsepcount=\count293
-\@dtl@datatype=\count294
-\dtl@codeA=\count295
-\dtl@codeB=\count296
-\@dtl@foreach@level=\count297
+\@dtl@tmpcount=\count301
+\dtl@tmplength=\skip68
+\dtl@sortresult=\count302
+\@dtl@numgrpsepcount=\count303
+\@dtl@datatype=\count304
+\dtl@codeA=\count305
+\dtl@codeB=\count306
+\@dtl@foreach@level=\count307
 )
 ("C:\Users\HP\AppData\Local\Programs\MiKTeX 2.9\tex\latex\glossaries\base\gloss
 aries-compatible-307.sty"
@@ -513,9 +635,9 @@ Package: tracklang 2018/05/13 v1.3.6 (NLCT) Track Languages
 ossaries-english.ldf"
 File: glossaries-english.ldf 2014/11/23 v1.0
 )
-\gls@level=\count298
+\gls@level=\count308
 \@gls@tmpb=\toks29
-\gls@tmplen=\skip68
+\gls@tmplen=\skip69
 \glskeylisttok=\toks30
 \glslabeltok=\toks31
 \glsshorttok=\toks32
@@ -528,7 +650,7 @@ Package: glossary-hypernav 2018/07/23 v4.41 (NLCT)
 ("C:\Users\HP\AppData\Local\Programs\MiKTeX 2.9\tex\latex\glossaries\styles\glo
 ssary-list.sty"
 Package: glossary-list 2018/07/23 v4.41 (NLCT)
-\glslistdottedwidth=\skip69
+\glslistdottedwidth=\skip70
 )
 ("C:\Users\HP\AppData\Local\Programs\MiKTeX 2.9\tex\latex\glossaries\styles\glo
 ssary-long.sty"
@@ -536,24 +658,24 @@ Package: glossary-long 2018/07/23 v4.41 (NLCT)
 
 ("C:\Users\HP\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\longtable.sty"
 Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
-\LTleft=\skip70
-\LTright=\skip71
-\LTpre=\skip72
-\LTpost=\skip73
-\LTchunksize=\count299
-\LTcapwidth=\dimen168
+\LTleft=\skip71
+\LTright=\skip72
+\LTpre=\skip73
+\LTpost=\skip74
+\LTchunksize=\count309
+\LTcapwidth=\dimen172
 \LT@head=\box52
 \LT@firsthead=\box53
 \LT@foot=\box54
 \LT@lastfoot=\box55
-\LT@cols=\count300
-\LT@rows=\count301
-\c@LT@tables=\count302
-\c@LT@chunks=\count303
+\LT@cols=\count310
+\LT@rows=\count311
+\c@LT@tables=\count312
+\c@LT@chunks=\count313
 \LT@p@ftn=\toks34
 )
-\glsdescwidth=\skip74
-\glspagelistwidth=\skip75
+\glsdescwidth=\skip75
+\glspagelistwidth=\skip76
 )
 ("C:\Users\HP\AppData\Local\Programs\MiKTeX 2.9\tex\latex\glossaries\styles\glo
 ssary-super.sty"
@@ -562,33 +684,33 @@ Package: glossary-super 2018/07/23 v4.41 (NLCT)
 ("C:\Users\HP\AppData\Local\Programs\MiKTeX 2.9\tex\latex\supertabular\supertab
 ular.sty"
 Package: supertabular 2004/02/20 v4.1e the supertabular environment
-\c@tracingst=\count304
-\ST@wd=\dimen169
-\ST@rightskip=\skip76
-\ST@leftskip=\skip77
-\ST@parfillskip=\skip78
-\ST@pageleft=\dimen170
-\ST@headht=\dimen171
-\ST@tailht=\dimen172
-\ST@pagesofar=\dimen173
-\ST@pboxht=\dimen174
-\ST@lineht=\dimen175
-\ST@stretchht=\dimen176
-\ST@prevht=\dimen177
-\ST@toadd=\dimen178
-\ST@dimen=\dimen179
+\c@tracingst=\count314
+\ST@wd=\dimen173
+\ST@rightskip=\skip77
+\ST@leftskip=\skip78
+\ST@parfillskip=\skip79
+\ST@pageleft=\dimen174
+\ST@headht=\dimen175
+\ST@tailht=\dimen176
+\ST@pagesofar=\dimen177
+\ST@pboxht=\dimen178
+\ST@lineht=\dimen179
+\ST@stretchht=\dimen180
+\ST@prevht=\dimen181
+\ST@toadd=\dimen182
+\ST@dimen=\dimen183
 \ST@pbox=\box56
 ))
 ("C:\Users\HP\AppData\Local\Programs\MiKTeX 2.9\tex\latex\glossaries\styles\glo
 ssary-tree.sty"
 Package: glossary-tree 2018/07/23 v4.41 (NLCT)
-\glstreeindent=\skip79
+\glstreeindent=\skip80
 ))
 \glswrite=\write3
 \glo@acronym@file=\write4
 \openout4 = `main.acn'.
 
-Package glossaries Info: Writing glossary file main.acn on input line 20.
+Package glossaries Info: Writing glossary file main.acn on input line 27.
 
 \@input{glossaries.aux}
 \openout2 = `glossaries.aux'.
@@ -596,77 +718,41 @@ Package glossaries Info: Writing glossary file main.acn on input line 20.
 (glossaries.tex) (main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
 
 ("C:\Users\HP\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count305
-\scratchdimen=\dimen180
+\scratchcounter=\count315
+\scratchdimen=\dimen184
 \scratchbox=\box57
-\nofMPsegments=\count306
-\nofMParguments=\count307
+\nofMPsegments=\count316
+\nofMParguments=\count317
 \everyMPshowfont=\toks35
-\MPscratchCnt=\count308
-\MPscratchDim=\dimen181
-\MPnumerator=\count309
-\makeMPintoPDFobject=\count310
+\MPscratchCnt=\count318
+\MPscratchDim=\dimen185
+\MPnumerator=\count319
+\makeMPintoPDFobject=\count320
 \everyMPtoPDFconversion=\toks36
 )
 ("C:\Users\HP\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-bas
 e.sty"
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
-("C:\Users\HP\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.
-sty"
-Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
-)
 ("C:\Users\HP\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty"
 Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
-
-("C:\Users\HP\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\kvdefineke
-ys.sty"
-Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
-
-("C:\Users\HP\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.st
-y"
-Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
-)))
-("C:\Users\HP\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.st
-y"
-Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
-
-("C:\Users\HP\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\kvsetkeys.
-sty"
-Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
-
-("C:\Users\HP\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\etexcmds.s
-ty"
-Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
-
-("C:\Users\HP\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ifluatex.s
-ty"
-Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
-Package ifluatex Info: LuaTeX not detected.
-))))
-("C:\Users\HP\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\pdftexcmds
-.sty"
-Package: pdftexcmds 2018/09/10 v0.29 Utility functions of pdfTeX for LuaTeX (HO
-)
-Package pdftexcmds Info: LuaTeX not detected.
-Package pdftexcmds Info: \pdf@primitive is available.
-Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode found.
 )
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 38.
@@ -791,11 +877,31 @@ Dictionary: translator-basic-dictionary, Language: English
 ("C:\Users\HP\AppData\Local\Programs\MiKTeX 2.9\tex\latex\siunitx\siunitx-abbre
 viations.cfg"
 File: siunitx-abbreviations.cfg 2017/11/26 v2.7k siunitx: Abbreviated units
-) (main.glsdefs)
-<images/BK_logo.png, id=1, 682.55pt x 401.5pt>
+)
+\AtBeginShipoutBox=\box58
+Package hyperref Info: Link coloring ON on input line 42.
+
+("C:\Users\HP\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
+Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
+
+("C:\Users\HP\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\gettitlest
+ring.sty"
+Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
+)
+\c@section@level=\count321
+)
+LaTeX Info: Redefining \ref on input line 42.
+LaTeX Info: Redefining \pageref on input line 42.
+LaTeX Info: Redefining \nameref on input line 42.
+ (main.out) (main.out)
+\@outlinefile=\write5
+\openout5 = `main.out'.
+
+ (main.glsdefs)
+<images/BK_logo.png, id=115, 682.55pt x 401.5pt>
 File: images/BK_logo.png Graphic file (type png)
 <use images/BK_logo.png>
-Package pdftex.def Info: images/BK_logo.png  used on input line 37.
+Package pdftex.def Info: images/BK_logo.png  used on input line 46.
 (pdftex.def)             Requested size: 477.78175pt x 281.04808pt.
  [1
 
@@ -804,35 +910,40 @@ Package pdftex.def Info: images/BK_logo.png  used on input line 37.
 
 
 {C:/Users/HP/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./images/BK_lo
-go.png>] (chapters/abstract.tex) [1
+go.png>]
+(chapters/abstract.tex) [1
 
-]
-(chapters/acknowledgements.tex) [2
+] (chapters/acknowledgements.tex) [2
 
 ] (main.toc)
-\tf@toc=\write5
-\openout5 = `main.toc'.
+\tf@toc=\write6
+\openout6 = `main.toc'.
 
- [3
+
+[3
 
 ] (main.lof)
-\tf@lof=\write6
-\openout6 = `main.lof'.
+\tf@lof=\write7
+\openout7 = `main.lof'.
 
  [4
 
 ] (main.lot)
-\tf@lot=\write7
-\openout7 = `main.lot'.
+\tf@lot=\write8
+\openout8 = `main.lot'.
 
 
-(main.acr [5
-
-]) [6
+No file main.acr.
+[5
 
 ]
 Chapter 1.
-(chapters/introduction.tex) [1
+(chapters/introduction.tex)pdfTeX warning (ext4): destination with the same ide
+ntifier (name{page.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.73 \chapter
+             {Background} [1
 
 ]
 Chapter 2.
@@ -844,7 +955,7 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 11.
-<images/Microcontroller-Structure.png, id=32, 468.24937pt x 268.00125pt>
+<images/Microcontroller-Structure.png, id=256, 468.24937pt x 268.00125pt>
 File: images/Microcontroller-Structure.png Graphic file (type png)
 <use images/Microcontroller-Structure.png>
 Package pdftex.def Info: images/Microcontroller-Structure.png  used on input li
@@ -861,54 +972,148 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [3 <./images/Microcontroller-Structure.png>] [4]
-<images/rs485-fullduplex-halfduplex.jpg, id=45, 469.00218pt x 362.85562pt>
+<images/rs485-fullduplex-halfduplex.jpg, id=293, 469.00218pt x 362.85562pt>
 File: images/rs485-fullduplex-halfduplex.jpg Graphic file (type jpg)
 <use images/rs485-fullduplex-halfduplex.jpg>
 Package pdftex.def Info: images/rs485-fullduplex-halfduplex.jpg  used on input 
-line 91.
+line 94.
 (pdftex.def)             Requested size: 375.20226pt x 290.28488pt.
-<images/RS-485_waveform.png, id=46, 488.82625pt x 151.56625pt>
+<images/RS-485_waveform.png, id=295, 488.82625pt x 151.56625pt>
 File: images/RS-485_waveform.png Graphic file (type png)
 <use images/RS-485_waveform.png>
-Package pdftex.def Info: images/RS-485_waveform.png  used on input line 101.
+Package pdftex.def Info: images/RS-485_waveform.png  used on input line 104.
 (pdftex.def)             Requested size: 391.06152pt x 121.25316pt.
  [5] [6 <./images/rs485-fullduplex-halfduplex.jpg> <./images/RS-485_waveform.pn
 g>]
-<images/mqttEg.png, id=55, 705.63625pt x 630.355pt>
+<images/mqttEg.png, id=307, 705.63625pt x 630.355pt>
 File: images/mqttEg.png Graphic file (type png)
 <use images/mqttEg.png>
-Package pdftex.def Info: images/mqttEg.png  used on input line 115.
+Package pdftex.def Info: images/mqttEg.png  used on input line 118.
 (pdftex.def)             Requested size: 282.2495pt x 252.13753pt.
-) [7 <./images/mqttEg.png>]
-[8]
+<images/ws-1.jpg, id=309, 510.90875pt x 395.4775pt>
+File: images/ws-1.jpg Graphic file (type jpg)
+<use images/ws-1.jpg>
+Package pdftex.def Info: images/ws-1.jpg  used on input line 128.
+(pdftex.def)             Requested size: 357.63368pt x 276.83235pt.
+) [7] [8 <./images/mqttEg.png> <./images/ws-1.jpg>]
 Chapter 3.
-(chapters/chapter03.tex) [9
+(chapters/chapter03.tex
+<images/hardwareBlock.png, id=323, 934.49126pt x 442.65375pt>
+File: images/hardwareBlock.png Graphic file (type png)
+<use images/hardwareBlock.png>
+Package pdftex.def Info: images/hardwareBlock.png  used on input line 3.
+(pdftex.def)             Requested size: 467.24449pt x 221.32632pt.
 
-]
+Overfull \hbox (40.45316pt too wide) in paragraph at lines 3--4
+[][] 
+ []
+
+[9
+
+ <./images/hardwareBlock.png>]
+<images/stm32f4_discovery.jpg, id=331, 270.25969pt x 417.05812pt>
+File: images/stm32f4_discovery.jpg Graphic file (type jpg)
+<use images/stm32f4_discovery.jpg>
+Package pdftex.def Info: images/stm32f4_discovery.jpg  used on input line 46.
+(pdftex.def)             Requested size: 270.25902pt x 417.0571pt.
+ [10]
+<images/headerMcu.PNG, id=337, 412.54124pt x 413.29407pt>
+File: images/headerMcu.PNG Graphic file (type png)
+<use images/headerMcu.PNG>
+Package pdftex.def Info: images/headerMcu.PNG  used on input line 63.
+(pdftex.def)             Requested size: 412.54024pt x 413.29305pt.
+ [11 <./images/stm32f4_discovery.jpg>]
+<images/header485.PNG, id=343, 703.12688pt x 416.30531pt>
+File: images/header485.PNG Graphic file (type png)
+<use images/header485.PNG>
+Package pdftex.def Info: images/header485.PNG  used on input line 73.
+(pdftex.def)             Requested size: 442.97227pt x 262.27373pt.
+
+Overfull \hbox (16.18094pt too wide) in paragraph at lines 73--74
+ [] 
+ []
+
+<images/module-rs485.png, id=344, 263.48438pt x 82.80937pt>
+File: images/module-rs485.png Graphic file (type png)
+<use images/module-rs485.png>
+Package pdftex.def Info: images/module-rs485.png  used on input line 80.
+(pdftex.def)             Requested size: 263.48372pt x 82.80916pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[12 <./images/headerMcu.PNG>] [13 <./images/header485.PNG> <./images/module-rs4
+85.png>]
+<images/module-esp.png, id=361, 445.665pt x 226.59656pt>
+File: images/module-esp.png Graphic file (type png)
+<use images/module-esp.png>
+Package pdftex.def Info: images/module-esp.png  used on input line 151.
+(pdftex.def)             Requested size: 401.09479pt x 203.935pt.
+) [14 <./images/module-esp.png>] [15]
 Chapter 4.
-(chapters/chapter04.tex) [10
+(chapters/chapter04.tex) [16
 
 ]
 Chapter 5.
-(chapters/conclusion.tex) [11
+(chapters/chapter05.tex) [17
 
-] (main.aux) ) 
+]
+Chapter 6.
+(chapters/conclusion.tex)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 90.
+ [18
+
+]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 90.
+ (main.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 90.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 90.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: D11305159A96E1B465AEA67BF41D3323;1806.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 90.
+ ) 
 Here is how much of TeX's memory you used:
- 20723 strings out of 492969
- 405410 string characters out of 3127917
- 476198 words of memory out of 3000000
- 24343 multiletter control sequences out of 15000+200000
+ 24385 strings out of 492969
+ 461272 string characters out of 3127917
+ 557502 words of memory out of 3000000
+ 27896 multiletter control sequences out of 15000+200000
  542761 words of font info for 63 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 46i,11n,63p,2001b,747s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Users/HP/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public
-/amsfonts/cm/cmbx12.pfb><C:/Users/HP/AppData/Local/Programs/MiKTeX 2.9/fonts/ty
-pe1/public/amsfonts/cm/cmr12.pfb><C:/Users/HP/AppData/Local/Programs/MiKTeX 2.9
-/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/HP/AppData/Local/Programs/M
-iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on main.pdf (18 pages, 321585 bytes).
+ 46i,11n,63p,2001b,902s stack positions out of 5000i,500n,10000p,200000b,50000s
+pdfTeX warning (dest): name{glo:mqtt} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{glo:dac} has been referenced but does not exist, re
+placed by a fixed one
+
+pdfTeX warning (dest): name{glo:adc} has been referenced but does not exist, re
+placed by a fixed one
+
+pdfTeX warning (dest): name{glo:cpu} has been referenced but does not exist, re
+placed by a fixed one
+
+pdfTeX warning (dest): name{glo:ram} has been referenced but does not exist, re
+placed by a fixed one
+
+pdfTeX warning (dest): name{glo:cu} has been referenced but does not exist, rep
+laced by a fixed one
+
+pdfTeX warning (dest): name{glo:alu} has been referenced but does not exist, re
+placed by a fixed one
+
+pdfTeX warning (dest): name{glo:rom} has been referenced but does not exist, re
+placed by a fixed one
+
+pdfTeX warning (dest): name{glo:mcu} has been referenced but does not exist, re
+placed by a fixed one
+
+<C:/Users/HP/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
+mbx12.pfb><C:/Users/HP/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/ams
+fonts/cm/cmr12.pfb><C:/Users/HP/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/p
+ublic/amsfonts/cm/cmr17.pfb><C:/Users/HP/AppData/Local/Programs/MiKTeX 2.9/font
+s/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on main.pdf (24 pages, 1094278 bytes).
 PDF statistics:
- 86 PDF objects out of 1000 (max. 8388607)
- 0 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 416 PDF objects out of 1000 (max. 8388607)
+ 78 named destinations out of 1000 (max. 500000)
+ 285 words of extra memory for PDF output out of 10000 (max. 10000000)
 

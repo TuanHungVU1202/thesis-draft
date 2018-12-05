@@ -55,7 +55,10 @@
   \subsection{Introduction}
   Nowadays, there are various communication protocols can be used for the thesis, namely I2C, ISP, RS232, RS-485, Bluetooth or Wi-Fi. Each protocol is designed to be suitable for specified purpose with different advantages or disadvantages, which means a perfect protocol does not exist. When making a decision to choose suitable protocols for the thesis, the trade-off between the stabilization and the speed of the communication protocol has been considered carefully.
 
-  In this thesis, RS-485 is chosen as the main way for components in the system to communicate with each other. RS-485 is defined in 1983 not as a protocol but an electrical interface standard and only specifies the drivers and receivers’ characteristics. It is developed in order to make data rate and transmitting distance are inversely proportional. For instance, the data transmitting speed can reach 10 Mbps within distance of 16 meters or if the distance is extended to 1220 meters, the data rate is lower to 100 kbps. The advantage of RS-485 over RS232, which is developed in 1960, is multiple nodes can be parallel connected to a bus. Additionally, the network can be extended in length and number of nodes easily by using simple connectors. Besides, Wi-Fi, Bluetooth, GSM and MQTT are also implemented in the thesis in order to take the advantages of different communication protocols in different circumstances. 
+  In this thesis, RS-485 is chosen as the main way for components in the system to communicate with each other. RS-485 is defined in 1983 not as a protocol but an electrical interface standard and only specifies the drivers and receivers’ characteristics. It is developed in order to make data rate and transmitting distance are inversely proportional. For instance, the data transmitting speed can reach 10 Mbps within distance of 16 meters or if the distance is extended to 1220 meters, the data rate is lower to 100 kbps. The advantage of RS-485 over RS232, which is developed in 1960, is multiple nodes can be parallel connected to a bus. Additionally, the network can be extended in length and number of nodes easily by using simple connectors. Besides, Wi-Fi, Bluetooth, GSM and MQTT are also implemented in the thesis in order to take the advantages of different communication protocols in different circumstances.
+  
+  \subsection{Universal asynchronous receiver-transmitter (UART)}
+  %TODO: finish UART subsection
   
   \subsection{RS-485}
   Table~\ref{table:RS-485HighLightSpecs} shows the remarkable specifications of RS-485. With these characteristics, RS-485 was a robust interface standard and was able to meet the requirements in industries, in which implemented applications that need a stable, fast and reliable connection. 
@@ -89,7 +92,7 @@
     \begin{figure}[!ht]
       \begin{center}
       \includegraphics[scale=0.8]{images/rs485-fullduplex-halfduplex.jpg}
-      \caption{Half-duplex(upper) and Full-duplex(below) implementations}
+      \caption{Half-duplex and Full-duplex implementations}
       \label{fig:fullHalfDuplex}
       \end{center}
     \end{figure}
@@ -106,10 +109,10 @@
 
     As written in the introduction, RS-485 can connect with multiple transmitters and receivers in the same network. For instance, using input resistance around 12k\si{\ohm},the numbers of devices can connect to the system is up to 32. Besides, with the connecters, this number can increase significantly to the number of thousands and the transmitting distance can be also extended to kilometers. In addition, the network implemented with RS-485 needs termination, usually with a 120\si{\ohm} resistance at the end of two wires. This is applied to terminate or minimize the reflection in order to avoid the fraud of sending data. Furthermore, it usually included pull up and pull down resistors for fail-safe bias in each wire in case that any wire is not controlled by any device. When input voltage ranging from -200mV to +200mV, receiver understands as “undefined” state, which caused by several reasons such as system is shutdown, connection from receiver to network is lost, or cable has an open or short part. In this case, fail-safe biasing is applied in order to confirm that the receivers receive defined states only.
 
-    \subsection{MQTT}
+  \subsection{MQTT}
     MQTT is abbreviation of Message Queuing Telemetry Transport, which is a protocol laid in Application layer of OSI model. It is designed as a machine-to-machine and remarkably lightweight protocol that helps communication between constrained devices becomes effortless in comparison to other wireless protocols. In detail, its working principle based on publish and subscribe methodology in order to reduce the amount of transmitting data which leads to the reduction of used bandwidth, latency and power consumption.
 
-    A \gls{mqtt} system is the combination of a server, but usually named broker, and the clients, in which can acts as either a publisher, subscriber or both. One broker can have numerous clients connect to and each client can subscribe to any topic it is programmed. These subscribers are following and watching for the changes of data of the subscribed topics, once other clients which are defined as the publisher publishes message to the topics, then the broker distributed the payload of message to other clients who had subscribed to those topics. In this scenario, the publisher and subscribers do not need to know the information of each other, the only needed are the topics for publishing and subscribing. Figure~\ref{fig:mqttEg} refers a simple example of a MQTT system consists of one broker and four clients, in which three clients are the publishers and one is the subscriber that subscribes to three topics the publishers publish to. To be specific, three publishers are the sensor nodes publish to three topics, temp1, temp2 and temp3; the last client acts as the subscriber that follows three topics mentioned previously. At once, the subscriber will receive the message whenever a publisher broadcasts the message to any of those topics.
+    A \gls{mqtt} system is the combination of a server, but usually named broker, and the clients, in which can acts as either a publisher, subscriber or both. One broker can have numerous clients connect to and each client can subscribe to any topic it is programmed. These subscribers are following and watching for the changes of data of the subscribed topics, once other clients which are defined as the publisher publishes message to the topics, then the broker distributed the payload of message to other clients who had subscribed to those topics. In this scenario, the publisher and subscribers do not need to know the information of each other, the only needed are the topics for publishing and subscribing. Figure~\ref{fig:mqttEg} refers a simple example of a MQTT system consists of one broker and four clients, in which three clients are the publishers and one is the subscriber that subscribes to three topics the publishers publish to. To be specific, three publishers are the sensor nodes publish to three topics, temp1, temp2 and temp3; the last client named Sensor Data Gatherer acts as the subscriber that follows three topics mentioned previously. At once, the subscriber will receive the message whenever a publisher broadcasts the message to any of those topics. Implemented MQTT system will be described in details in later part of the thesis.
     \begin{figure}[!ht]
       \begin{center}
         \includegraphics[scale=0.4]{images/mqttEg.png}
@@ -118,7 +121,21 @@
       \end{center}
     \end{figure}
 
-    \subsection{Websocket}
+  \subsection{WebSocket}
+    WebSocket was introduced in 2011 in term of a communication protocol, implementing full-duplex channels over one TCP connection. The protocol is laid in Application layer of OSI model but distinguished from HTTP. Distinct to HTTP, in WebSocket applications, a server can send the data to client without waiting for requests from client. All data are being sent between server and client will be sent to a settled connection which helps accelerate the data rate and keep the connection opened when necessary. Similar to \gls{mqtt}, it is designed to reduce the transmitting data, which leads to the reduction of bandwidth and consumed power. Although it is designed for web applications, still, it can be implemented in any applications that need such a lightweight protocol.
+    \begin{figure}[!ht]
+      \begin{center}
+        \includegraphics[scale=0.7]{images/ws-1.jpg}
+        \caption{WebSocket working principle}
+        \label{fig:wsPrinciple}
+      \end{center}
+    \end{figure}
+    Figure~\ref{fig:wsPrinciple} illustrates how WebSocket works. There are two parts of the protocol, handshaking and transmitting data. At first, client sends a request to server to initialize the websocket connection, the server then send an acceptance to connect. After this point, the data are being sent as WS frame with numbering as in the Figure~\ref{fig:wsPrinciple}.
+
+\section{Facial Recognition}
+%TODO: finish facial recognition chapter
+\section{Application Server}
+%TODO:finish application server section
 
 
 
