@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6880 64-bit) (preloaded format=pdflatex 2018.11.18)  6 DEC 2018 01:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6880 64-bit) (preloaded format=pdflatex 2018.11.18)  9 DEC 2018 18:57
 entering extended mode
 **d:/thesis-draft/main.tex
 (d:/thesis-draft/main.tex
@@ -898,7 +898,7 @@ LaTeX Info: Redefining \nameref on input line 42.
 \openout5 = `main.out'.
 
  (main.glsdefs)
-<images/BK_logo.png, id=115, 682.55pt x 401.5pt>
+<images/BK_logo.png, id=147, 682.55pt x 401.5pt>
 File: images/BK_logo.png Graphic file (type png)
 <use images/BK_logo.png>
 Package pdftex.def Info: images/BK_logo.png  used on input line 46.
@@ -915,26 +915,34 @@ go.png>]
 
 ] (chapters/acknowledgements.tex) [2
 
-] (main.toc)
+] (main.toc
+[3
+
+])
 \tf@toc=\write6
 \openout6 = `main.toc'.
 
 
-[3
 
-] (main.lof)
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[4] (main.lof)
 \tf@lof=\write7
 \openout7 = `main.lof'.
 
- [4
+ [5
 
 ] (main.lot)
 \tf@lot=\write8
 \openout8 = `main.lot'.
 
+ (main.acr [6
 
-No file main.acr.
-[5
+]) [7
+
 
 ]
 Chapter 1.
@@ -955,7 +963,7 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 11.
-<images/Microcontroller-Structure.png, id=256, 468.24937pt x 268.00125pt>
+<images/Microcontroller-Structure.png, id=364, 468.24937pt x 268.00125pt>
 File: images/Microcontroller-Structure.png Graphic file (type png)
 <use images/Microcontroller-Structure.png>
 Package pdftex.def Info: images/Microcontroller-Structure.png  used on input li
@@ -964,33 +972,26 @@ ne 22.
 
 [2
 
-]
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[3 <./images/Microcontroller-Structure.png>] [4]
-<images/rs485-fullduplex-halfduplex.jpg, id=293, 469.00218pt x 362.85562pt>
+] [3 <./images/Microcontroller-Structure.png>] [4]
+<images/rs485-fullduplex-halfduplex.jpg, id=393, 469.00218pt x 362.85562pt>
 File: images/rs485-fullduplex-halfduplex.jpg Graphic file (type jpg)
 <use images/rs485-fullduplex-halfduplex.jpg>
 Package pdftex.def Info: images/rs485-fullduplex-halfduplex.jpg  used on input 
 line 94.
 (pdftex.def)             Requested size: 375.20226pt x 290.28488pt.
-<images/RS-485_waveform.png, id=295, 488.82625pt x 151.56625pt>
+<images/RS-485_waveform.png, id=395, 488.82625pt x 151.56625pt>
 File: images/RS-485_waveform.png Graphic file (type png)
 <use images/RS-485_waveform.png>
 Package pdftex.def Info: images/RS-485_waveform.png  used on input line 104.
 (pdftex.def)             Requested size: 391.06152pt x 121.25316pt.
  [5] [6 <./images/rs485-fullduplex-halfduplex.jpg> <./images/RS-485_waveform.pn
 g>]
-<images/mqttEg.png, id=307, 705.63625pt x 630.355pt>
+<images/mqttEg.png, id=408, 705.63625pt x 630.355pt>
 File: images/mqttEg.png Graphic file (type png)
 <use images/mqttEg.png>
 Package pdftex.def Info: images/mqttEg.png  used on input line 118.
 (pdftex.def)             Requested size: 282.2495pt x 252.13753pt.
-<images/ws-1.jpg, id=309, 510.90875pt x 395.4775pt>
+<images/ws-1.jpg, id=410, 510.90875pt x 395.4775pt>
 File: images/ws-1.jpg Graphic file (type jpg)
 <use images/ws-1.jpg>
 Package pdftex.def Info: images/ws-1.jpg  used on input line 128.
@@ -998,7 +999,7 @@ Package pdftex.def Info: images/ws-1.jpg  used on input line 128.
 ) [7] [8 <./images/mqttEg.png> <./images/ws-1.jpg>]
 Chapter 3.
 (chapters/chapter03.tex
-<images/hardwareBlock.png, id=323, 934.49126pt x 442.65375pt>
+<images/hardwareBlock.png, id=422, 934.49126pt x 442.65375pt>
 File: images/hardwareBlock.png Graphic file (type png)
 <use images/hardwareBlock.png>
 Package pdftex.def Info: images/hardwareBlock.png  used on input line 3.
@@ -1011,19 +1012,19 @@ Overfull \hbox (40.45316pt too wide) in paragraph at lines 3--4
 [9
 
  <./images/hardwareBlock.png>]
-<images/stm32f4_discovery.jpg, id=331, 270.25969pt x 417.05812pt>
+<images/stm32f4_discovery.jpg, id=430, 270.25969pt x 417.05812pt>
 File: images/stm32f4_discovery.jpg Graphic file (type jpg)
 <use images/stm32f4_discovery.jpg>
 Package pdftex.def Info: images/stm32f4_discovery.jpg  used on input line 46.
 (pdftex.def)             Requested size: 270.25902pt x 417.0571pt.
  [10]
-<images/headerMcu.PNG, id=337, 412.54124pt x 413.29407pt>
+<images/headerMcu.PNG, id=436, 412.54124pt x 413.29407pt>
 File: images/headerMcu.PNG Graphic file (type png)
 <use images/headerMcu.PNG>
 Package pdftex.def Info: images/headerMcu.PNG  used on input line 63.
 (pdftex.def)             Requested size: 412.54024pt x 413.29305pt.
  [11 <./images/stm32f4_discovery.jpg>]
-<images/header485.PNG, id=343, 703.12688pt x 416.30531pt>
+<images/header485.PNG, id=443, 703.12688pt x 416.30531pt>
 File: images/header485.PNG Graphic file (type png)
 <use images/header485.PNG>
 Package pdftex.def Info: images/header485.PNG  used on input line 73.
@@ -1033,7 +1034,7 @@ Overfull \hbox (16.18094pt too wide) in paragraph at lines 73--74
  [] 
  []
 
-<images/module-rs485.png, id=344, 263.48438pt x 82.80937pt>
+<images/module-rs485.png, id=444, 263.48438pt x 82.80937pt>
 File: images/module-rs485.png Graphic file (type png)
 <use images/module-rs485.png>
 Package pdftex.def Info: images/module-rs485.png  used on input line 80.
@@ -1043,24 +1044,99 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [12 <./images/headerMcu.PNG>] [13 <./images/header485.PNG> <./images/module-rs4
 85.png>]
-<images/module-esp.png, id=361, 445.665pt x 226.59656pt>
+<images/module-esp.png, id=460, 445.665pt x 226.59656pt>
 File: images/module-esp.png Graphic file (type png)
 <use images/module-esp.png>
 Package pdftex.def Info: images/module-esp.png  used on input line 151.
 (pdftex.def)             Requested size: 401.09479pt x 203.935pt.
-) [14 <./images/module-esp.png>] [15]
+<images/powerMaster.JPG, id=462, 475.7775pt x 180.675pt>
+File: images/powerMaster.JPG Graphic file (type jpg)
+<use images/powerMaster.JPG>
+Package pdftex.def Info: images/powerMaster.JPG  used on input line 164.
+(pdftex.def)             Requested size: 380.6225pt x 144.54018pt.
+<images/headerPowerOut.JPG, id=463, 268.75406pt x 176.91093pt>
+File: images/headerPowerOut.JPG Graphic file (type jpg)
+<use images/headerPowerOut.JPG>
+Package pdftex.def Info: images/headerPowerOut.JPG  used on input line 171.
+(pdftex.def)             Requested size: 268.7534pt x 176.91049pt.
+<images/module-2596.jpg, id=464, 624.08156pt x 298.86656pt>
+File: images/module-2596.jpg Graphic file (type jpg)
+<use images/module-2596.jpg>
+Package pdftex.def Info: images/module-2596.jpg  used on input line 178.
+(pdftex.def)             Requested size: 374.45183pt x 179.3213pt.
+<images/module1117.png, id=465, 200.24812pt x 179.92218pt>
+File: images/module1117.png Graphic file (type png)
+<use images/module1117.png>
+Package pdftex.def Info: images/module1117.png  used on input line 185.
+(pdftex.def)             Requested size: 200.24763pt x 179.92174pt.
+ [14 <./images/module-esp.png>]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[15 <./images/powerMaster.JPG> <./images/headerPowerOut.JPG>] [16 <./images/mod
+ule-2596.jpg> <./images/module1117.png>]
+<images/pic16f628a.png, id=484, 291.33844pt x 191.9672pt>
+File: images/pic16f628a.png Graphic file (type png)
+<use images/pic16f628a.png>
+Package pdftex.def Info: images/pic16f628a.png  used on input line 230.
+(pdftex.def)             Requested size: 291.33772pt x 191.96672pt.
+<images/powerForSlave1.png, id=489, 482.55281pt x 309.40594pt>
+File: images/powerForSlave1.png Graphic file (type png)
+<use images/powerForSlave1.png>
+Package pdftex.def Info: images/powerForSlave1.png  used on input line 260.
+(pdftex.def)             Requested size: 386.04276pt x 247.52509pt.
+<images/powerForSlave2.png, id=490, 546.54187pt x 246.1697pt>
+File: images/powerForSlave2.png Graphic file (type png)
+<use images/powerForSlave2.png>
+Package pdftex.def Info: images/powerForSlave2.png  used on input line 267.
+(pdftex.def)             Requested size: 437.23409pt x 196.936pt.
+
+Overfull \hbox (10.44275pt too wide) in paragraph at lines 267--268
+ [] 
+ []
+
+[17 <./images/pic16f628a.png>]
+<images/header485Slave.png, id=499, 302.63063pt x 322.20375pt>
+File: images/header485Slave.png Graphic file (type png)
+<use images/header485Slave.png>
+Package pdftex.def Info: images/header485Slave.png  used on input line 277.
+(pdftex.def)             Requested size: 302.62988pt x 322.20296pt.
+<images/mcuButton.png, id=502, 429.85594pt x 281.55188pt>
+File: images/mcuButton.png Graphic file (type png)
+<use images/mcuButton.png>
+Package pdftex.def Info: images/mcuButton.png  used on input line 287.
+(pdftex.def)             Requested size: 399.76189pt x 261.84053pt.
+<images/mcuRelay.png, id=503, 497.60907pt x 319.1925pt>
+File: images/mcuRelay.png Graphic file (type png)
+<use images/mcuRelay.png>
+Package pdftex.def Info: images/mcuRelay.png  used on input line 294.
+(pdftex.def)             Requested size: 398.08778pt x 255.35434pt.
+<images/button.png, id=504, 340.27126pt x 282.30469pt>
+File: images/button.png Graphic file (type png)
+<use images/button.png>
+Package pdftex.def Info: images/button.png  used on input line 303.
+(pdftex.def)             Requested size: 340.27042pt x 282.30399pt.
+ [18 <./images/powerForSlave1.png>] [19 <./images/powerForSlave2.png> <./images
+/header485Slave.png>]
+<images/relay.png, id=518, 645.16031pt x 362.10281pt>
+File: images/relay.png Graphic file (type png)
+<use images/relay.png>
+Package pdftex.def Info: images/relay.png  used on input line 314.
+(pdftex.def)             Requested size: 419.34923pt x 235.36403pt.
+) [20 <./images/mcuButton.png> <./images/mcuRelay.png>] [21 <./images/button.pn
+g>] [22 <./images/relay.png>]
 Chapter 4.
-(chapters/chapter04.tex) [16
+(chapters/chapter04.tex) [23
 
 ]
 Chapter 5.
-(chapters/chapter05.tex) [17
+(chapters/chapter05.tex) [24
 
 ]
 Chapter 6.
 (chapters/conclusion.tex)
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 90.
- [18
+ [25
 
 ]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 90.
@@ -1068,52 +1144,25 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 90.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 90.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 90.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: D11305159A96E1B465AEA67BF41D3323;1806.
+(rerunfilecheck)             Checksum: 16E4F884EAAB91B0ABBF336DB32185DE;2386.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 90.
  ) 
 Here is how much of TeX's memory you used:
- 24385 strings out of 492969
- 461272 string characters out of 3127917
- 557502 words of memory out of 3000000
- 27896 multiletter control sequences out of 15000+200000
+ 24504 strings out of 492969
+ 463496 string characters out of 3127917
+ 559319 words of memory out of 3000000
+ 27968 multiletter control sequences out of 15000+200000
  542761 words of font info for 63 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  46i,11n,63p,2001b,902s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): name{glo:mqtt} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{glo:dac} has been referenced but does not exist, re
-placed by a fixed one
-
-pdfTeX warning (dest): name{glo:adc} has been referenced but does not exist, re
-placed by a fixed one
-
-pdfTeX warning (dest): name{glo:cpu} has been referenced but does not exist, re
-placed by a fixed one
-
-pdfTeX warning (dest): name{glo:ram} has been referenced but does not exist, re
-placed by a fixed one
-
-pdfTeX warning (dest): name{glo:cu} has been referenced but does not exist, rep
-laced by a fixed one
-
-pdfTeX warning (dest): name{glo:alu} has been referenced but does not exist, re
-placed by a fixed one
-
-pdfTeX warning (dest): name{glo:rom} has been referenced but does not exist, re
-placed by a fixed one
-
-pdfTeX warning (dest): name{glo:mcu} has been referenced but does not exist, re
-placed by a fixed one
-
-<C:/Users/HP/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
-mbx12.pfb><C:/Users/HP/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/ams
-fonts/cm/cmr12.pfb><C:/Users/HP/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/p
-ublic/amsfonts/cm/cmr17.pfb><C:/Users/HP/AppData/Local/Programs/MiKTeX 2.9/font
-s/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on main.pdf (24 pages, 1094278 bytes).
+<C:/Users/HP/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
+/cmbx12.pfb><C:/Users/HP/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/a
+msfonts/cm/cmr12.pfb><C:/Users/HP/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
+/public/amsfonts/cm/cmr17.pfb><C:/Users/HP/AppData/Local/Programs/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on main.pdf (33 pages, 1548519 bytes).
 PDF statistics:
- 416 PDF objects out of 1000 (max. 8388607)
- 78 named destinations out of 1000 (max. 500000)
- 285 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 588 PDF objects out of 1000 (max. 8388607)
+ 110 named destinations out of 1000 (max. 500000)
+ 409 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,6 +1,7 @@
 \contentsline {chapter}{Contents}{iii}{chapter*.3}
-\contentsline {chapter}{List of Figures}{iv}{chapter*.4}
-\contentsline {chapter}{List of Tables}{v}{chapter*.5}
+\contentsline {chapter}{List of Figures}{v}{chapter*.4}
+\contentsline {chapter}{List of Tables}{vi}{chapter*.5}
+\contentsline {chapter}{Acronym and Abbreviation}{vii}{section*.6}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
 \contentsline {chapter}{\numberline {2}Background}{2}{chapter.2}
 \contentsline {section}{\numberline {2.1}Microcontroller}{2}{section.2.1}
@@ -17,12 +18,19 @@
 \contentsline {section}{\numberline {2.4}Application Server}{8}{section.2.4}
 \contentsline {chapter}{\numberline {3}Hardware Design of The System}{9}{chapter.3}
 \contentsline {section}{\numberline {3.1}Expected System Diagram}{9}{section.3.1}
-\contentsline {section}{\numberline {3.2}Master}{10}{section.3.2}
+\contentsline {section}{\numberline {3.2}Master Design}{10}{section.3.2}
 \contentsline {subsection}{\numberline {3.2.1}Microcontroller Requirements}{10}{subsection.3.2.1}
 \contentsline {subsection}{\numberline {3.2.2}Module RS-485}{12}{subsection.3.2.2}
 \contentsline {subsection}{\numberline {3.2.3}Module ESP-8266}{14}{subsection.3.2.3}
 \contentsline {subsection}{\numberline {3.2.4}Module SIM800A}{15}{subsection.3.2.4}
 \contentsline {subsection}{\numberline {3.2.5}Power for Master}{15}{subsection.3.2.5}
-\contentsline {chapter}{\numberline {4}Algorithm and Software Design of The System}{16}{chapter.4}
-\contentsline {chapter}{\numberline {5}Experimental Results}{17}{chapter.5}
-\contentsline {chapter}{\numberline {6}Conclusion}{18}{chapter.6}
+\contentsline {section}{\numberline {3.3}Slave Design}{17}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Requirements}{17}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Power for Slaves}{18}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.3}Module RS-485}{18}{subsection.3.3.3}
+\contentsline {subsection}{\numberline {3.3.4}Controller Block}{18}{subsection.3.3.4}
+\contentsline {subsection}{\numberline {3.3.5}Button Block of Slave Button(s)}{19}{subsection.3.3.5}
+\contentsline {subsection}{\numberline {3.3.6}Relay block of Slave Relay(s)}{21}{subsection.3.3.6}
+\contentsline {chapter}{\numberline {4}Algorithm and Software Design of The System}{23}{chapter.4}
+\contentsline {chapter}{\numberline {5}Experimental Results}{24}{chapter.5}
+\contentsline {chapter}{\numberline {6}Conclusion}{25}{chapter.6}

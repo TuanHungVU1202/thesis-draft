@@ -12,6 +12,18 @@
 \contentsline {figure}{\numberline {3.4}{\ignorespaces Header for module RS-485}}{13}{figure.3.4}
 \contentsline {figure}{\numberline {3.5}{\ignorespaces Module RS-485}}{13}{figure.3.5}
 \contentsline {figure}{\numberline {3.6}{\ignorespaces Module ESP-8266 NodeMCU lua CP2102}}{14}{figure.3.6}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Header for Power blocks for Master}}{15}{figure.3.7}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Output header of Power for Master}}{15}{figure.3.8}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Module LM2596}}{16}{figure.3.9}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Module ASM1117}}{16}{figure.3.10}
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Microchip PIC16F628A}}{17}{figure.3.11}
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Power supply for Slaves 1}}{18}{figure.3.12}
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Power supply for Slaves 2}}{19}{figure.3.13}
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Header for module RS-485 in Slave circuits}}{19}{figure.3.14}
+\contentsline {figure}{\numberline {3.15}{\ignorespaces MCU of Slave Button(s)}}{20}{figure.3.15}
+\contentsline {figure}{\numberline {3.16}{\ignorespaces MCU of Slave Relay(s)}}{20}{figure.3.16}
+\contentsline {figure}{\numberline {3.17}{\ignorespaces Button block of Slave Button(s)}}{21}{figure.3.17}
+\contentsline {figure}{\numberline {3.18}{\ignorespaces Relay block of Slave Relay(s)}}{22}{figure.3.18}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
