@@ -308,11 +308,72 @@
   Figure~\ref{fig:buttonBlock} sketched the schematic of three-button block of Slave-3-Buttons, which means it is the typical block and may use for different numbers of buttons in one integrated circuit, depends on the decision of the author. In this thesis, the author used the same design for each button block, only increase or decrease the number of button if needed.
 
   \subsection{Relay block of Slave Relay(s)}
-  Relay is an electrical component which operates as a switch under electromagnetic working principle. It is useful when users need to switch state to control one to many circuit under one signal. A relay has two states are On and Off, switching bases on the current flows through its coil. Relay with parameters of 5 pins and 12V-10A DC is chosen in this thesis to ensure the switching circuit will operate accurately through long distance cable. Similar to Button block of Slave Button(s), the author use one design of a relay block and then increase or decrease the number of block in case needed. Figure~\ref{fig:relayBlock} shows one relay block of one of the Slave Relay(s) in the project.
   \begin{figure}[!ht]
     \begin{center}
     \includegraphics[scale=0.65]{images/relay.png}
     \caption{Relay block of Slave Relay(s)}
     \label{fig:relayBlock}
+    \end{center}
+  \end{figure}
+  Relay is an electrical component which operates as a switch under electromagnetic working principle. It is useful when users need to switch state to control one to many circuit under one signal. A relay has two states are On and Off, switching bases on the current flows through its coil. Relay with parameters of 5 pins and 12V-10A DC is chosen in this thesis to ensure the switching circuit will operate accurately through long distance cable. Similar to Button block of Slave Button(s), the author use one design of a relay block and then increase or decrease the number of block in case needed. Figure~\ref{fig:relayBlock} shows one relay block of one of the Slave Relay(s) in the project.
+
+  
+\section{Security Camera Block}
+When mention a security camera a few years back, people only think about an expensive system that only company level may afford and the system is massive itself, which make its mobility extremely low. However, world is changing rapidly, and with a household level, people still can implement a security camera system without paying a huge price but still, be provided with acceptable quality and performance. Furthermore, end users not only can view the security camera in fixed place but also can view camera from anywhere with Internet connection, an embedded computer and a device can connect to the Internet. In this thesis, the author built two function for Security Camera Block, which are Facial Recognition and Motion Detection. The first function is embedded onto a Mini Computer named Raspberry Pi 3, please see Figure~\ref{fig:rpiImage}, and second function, which is limited by resources from the author, will be integrated directly into Application Server as a prototype only.
+\begin{figure}[!ht]
+  \begin{center}
+  \includegraphics[scale=0.72]{images/rpi.png}
+  \caption{Raspberry Pi 3 Model B}
+  \label{fig:rpiImage}
+  \end{center}
+\end{figure}
+
+Raspberry Pi 3 has market share at third place only followed by Mac and Windows. It is a mini computer, which means it has small size but has been integrated with every component that makes it a computer can in an ATM card size. Raspberry Pi 3 is the most powerful option of Pi series, but it has reasonable price with widely support documents and community because its operating system is Linux or Windows 10 IoT.  Also, with the supports from the operating system itself and the specifications listed as following, it is a suitable computer for this project. Besides, instead of using an USB camera through USB port, which also compatible with other types of computers, the author used camera modules that attached directly onboard of Raspberry Pi through CSI as in Figure~\ref{fig:piCamModule}. The significant advantage of the camera module compare to other USB camera is the huge different of quality of camera input stream and processing speed because it is built for Raspberry Pi. Please see Table~\ref{table:piCamSpecs} for few highlight specifications of Pi Camera Module. After connecting Pi Camera Module with Raspberry Pi 3 through CSI port via ribbon cable, Raspberry Pi should have the ability to view, record video, connect with and control the system via Wi-Fi connection after some configurations in next chapter of this thesis. Figure~\ref{fig:piAndCam} shows the standalone Raspberry Pi with Pi Camera Module attached.
+
+Raspberry Pi 3 Specifications:
+\begin{itemize}
+  \item SoC: Broadcom BCM2837.
+  \item CPU: 4 core ARM Cortex-A53, clock 1.2GHz.
+  \item GPU: Broadcom VideoCore IV.
+  \item RAM: 1GB, bus 900Mhz.
+  \item Connection: 10/100 Ethernet, 2.4GHz 802.11n, Bluetooth 4.1 Classic, BLE.
+  \item GPIO: 40 pin.
+  \item Others: 4x USB port, microSD, camera module port, HDMI.
+\end{itemize}
+\begin{figure}[!ht]
+  \begin{center}
+  \includegraphics[scale=1]{images/piCamModule.png}
+  \caption{Raspberry Pi Camera Module}
+  \label{fig:piCamModule}
+  \end{center}
+\end{figure}
+\begin{table}[h!]
+  \begin{center}
+  \begin{tabular}{ |c|c|  }
+    \hline
+    Attribute & Detail\\
+    \hline
+    Weight& 3g\\
+    \hline
+    Resolution&   8 Megapixels\\
+    \hline
+    Video modes &1080p30, 720p60 and 640 x 480p60,90\\
+    \hline
+    Linux integration & V4L2 driver available\\
+    \hline
+    Sensor resolution & 3280 x 2464 pixels\\
+    \hline
+    Sensor image area & 3.68 x 2.76 mm (4.6 mm diagonal)\\
+    \hline
+   \end{tabular}
+   \caption{PiCamera Module Highlight Specifications}
+   \label{table:piCamSpecs}
+  \end{center}
+  \end{table}
+  \begin{figure}[!ht]
+    \begin{center}
+    \includegraphics[scale=0.15]{images/piAndCam.jpg}
+    \caption{Raspberry Pi Connected with PiCamera Module}
+    \label{fig:piAndCam}
     \end{center}
   \end{figure}

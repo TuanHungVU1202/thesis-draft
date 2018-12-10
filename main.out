@@ -31,6 +31,7 @@
 \BOOKMARK [2][-]{subsection.3.3.4}{Controller Block}{section.3.3}% 31
 \BOOKMARK [2][-]{subsection.3.3.5}{Button Block of Slave Button\(s\)}{section.3.3}% 32
 \BOOKMARK [2][-]{subsection.3.3.6}{Relay block of Slave Relay\(s\)}{section.3.3}% 33
-\BOOKMARK [0][-]{chapter.4}{Algorithm and Software Design of The System}{}% 34
-\BOOKMARK [0][-]{chapter.5}{Experimental Results}{}% 35
-\BOOKMARK [0][-]{chapter.6}{Conclusion}{}% 36
+\BOOKMARK [1][-]{section.3.4}{Security Camera Block}{chapter.3}% 34
+\BOOKMARK [0][-]{chapter.4}{Algorithm and Software Design of The System}{}% 35
+\BOOKMARK [0][-]{chapter.5}{Experimental Results}{}% 36
+\BOOKMARK [0][-]{chapter.6}{Conclusion}{}% 37

@@ -31,6 +31,7 @@
 \contentsline {subsection}{\numberline {3.3.4}Controller Block}{18}{subsection.3.3.4}
 \contentsline {subsection}{\numberline {3.3.5}Button Block of Slave Button(s)}{19}{subsection.3.3.5}
 \contentsline {subsection}{\numberline {3.3.6}Relay block of Slave Relay(s)}{21}{subsection.3.3.6}
-\contentsline {chapter}{\numberline {4}Algorithm and Software Design of The System}{23}{chapter.4}
-\contentsline {chapter}{\numberline {5}Experimental Results}{24}{chapter.5}
-\contentsline {chapter}{\numberline {6}Conclusion}{25}{chapter.6}
+\contentsline {section}{\numberline {3.4}Security Camera Block}{22}{section.3.4}
+\contentsline {chapter}{\numberline {4}Algorithm and Software Design of The System}{25}{chapter.4}
+\contentsline {chapter}{\numberline {5}Experimental Results}{26}{chapter.5}
+\contentsline {chapter}{\numberline {6}Conclusion}{27}{chapter.6}
