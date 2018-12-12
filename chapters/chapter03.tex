@@ -31,7 +31,7 @@
 
     Security Camera block is the block that monitors the main door and inside the house. The camera installed outdoor is responsible for outdoor security in which it will track people entering the house with a facial recognition system. Additionally, indoor camera should handle the motion detection system while the owner is not at home in order to find strange motion which maybe a burglar breaking in the house. These two system will track and alert by emails, mobile application and text message over GSM network in the case that they detect something. Furthermore, the three-dots indicates that the system can be extended with number of slaves over RS-485, but only up to 99 dues to the limitation of command frame.
 %Master hardware design
-\section{Master Design}
+\section{Master Design}\label{masterDesign}
     \subsection{Microcontroller Requirements}
     There are few requirements for the Microcontroller that the author decided to build the system for the thesis, listed as following.
     \begin{itemize}
@@ -317,7 +317,6 @@
   \end{figure}
   Relay is an electrical component which operates as a switch under electromagnetic working principle. It is useful when users need to switch state to control one to many circuit under one signal. A relay has two states are On and Off, switching bases on the current flows through its coil. Relay with parameters of 5 pins and 12V-10A DC is chosen in this thesis to ensure the switching circuit will operate accurately through long distance cable. Similar to Button block of Slave Button(s), the author use one design of a relay block and then increase or decrease the number of block in case needed. Figure~\ref{fig:relayBlock} shows one relay block of one of the Slave Relay(s) in the project.
 
-  
 \section{Security Camera Block}
 When mention a security camera a few years back, people only think about an expensive system that only company level may afford and the system is massive itself, which make its mobility extremely low. However, world is changing rapidly, and with a household level, people still can implement a security camera system without paying a huge price but still, be provided with acceptable quality and performance. Furthermore, end users not only can view the security camera in fixed place but also can view camera from anywhere with Internet connection, an embedded computer and a device can connect to the Internet. In this thesis, the author built two function for Security Camera Block, which are Facial Recognition and Motion Detection. The first function is embedded onto a Mini Computer named Raspberry Pi 3, please see Figure~\ref{fig:rpiImage}, and second function, which is limited by resources from the author, will be integrated directly into Application Server as a prototype only.
 \begin{figure}[!ht]
@@ -328,7 +327,7 @@ When mention a security camera a few years back, people only think about an expe
   \end{center}
 \end{figure}
 
-Raspberry Pi 3 has market share at third place only followed by Mac and Windows. It is a mini computer, which means it has small size but has been integrated with every component that makes it a computer can in an ATM card size. Raspberry Pi 3 is the most powerful option of Pi series, but it has reasonable price with widely support documents and community because its operating system is Linux or Windows 10 IoT.  Also, with the supports from the operating system itself and the specifications listed as following, it is a suitable computer for this project. Besides, instead of using an USB camera through USB port, which also compatible with other types of computers, the author used camera modules that attached directly onboard of Raspberry Pi through CSI as in Figure~\ref{fig:piCamModule}. The significant advantage of the camera module compare to other USB camera is the huge different of quality of camera input stream and processing speed because it is built for Raspberry Pi. Please see Table~\ref{table:piCamSpecs} for few highlight specifications of Pi Camera Module. After connecting Pi Camera Module with Raspberry Pi 3 through CSI port via ribbon cable, Raspberry Pi should have the ability to view, record video, connect with and control the system via Wi-Fi connection after some configurations in next chapter of this thesis. Figure~\ref{fig:piAndCam} shows the standalone Raspberry Pi with Pi Camera Module attached.
+Raspberry Pi 3 has market share at third place only followed by Mac and Windows. It is a mini computer, which means it has small size but has been integrated with every component that makes it a computer can in an ATM card size. Raspberry Pi 3 is the most powerful option of Pi series, but it has reasonable price with widely support documents and community because its operating system is Linux or Windows 10 IoT.  Also, with the supports from the operating system itself and the specifications listed as following, it is a suitable computer for this project. Besides, instead of using an USB camera through USB port, which also compatible with other types of computers, the author used camera modules that attached directly onboard of Raspberry Pi through CSI as in Figure~\ref{fig:piCamModule}. The significant advantage of the camera module compare to other USB camera is the huge different of quality of camera input stream and processing speed because it is built for Raspberry Pi. Please see Table~\ref{table:piCamSpecs} for few highlight specifications of Pi Camera Module. After connecting Pi Camera Module with Raspberry Pi 3 through CSI port via ribbon cable, Raspberry Pi should have the ability to view, record video, connect with and control the system via Wi-Fi connection after some configurations in next chapter of this thesis. Figure~\ref{fig:piAndCam} shows the standalone Raspberry Pi with Pi Camera Module attached. Furthermore, in the event that the owner need to add people into their recognition database, they can do it directly with Raspberry Pi and its PiCamera Module.
 
 Raspberry Pi 3 Specifications:
 \begin{itemize}
@@ -377,3 +376,56 @@ Raspberry Pi 3 Specifications:
     \label{fig:piAndCam}
     \end{center}
   \end{figure}
+
+
+\section{Full Schematic of the System}
+Following are the full schematics of the system, namely Power for Master, Master, Slave button(s) and Slave Relay(s), respectively. The other modules which are not mentioned in section \ref{masterDesign} are the parts that may be extended in the future.
+\begin{figure}[!ht]
+  \begin{center}
+  \includegraphics[scale=0.8]{images/powerMasterFull.PNG}
+  \caption{Full Schematic of Power for Master}
+  \label{fig:powerMasterFull}
+  \end{center}
+\end{figure}
+\begin{figure}[!ht]
+  \begin{center}
+  \includegraphics[scale=0.8]{images/headerMcu.PNG}
+  \caption{Header for STM32F4 Discovery Kit}
+  \label{fig:headerMcuFull}
+  \end{center}
+\end{figure}
+\begin{figure}[!ht]
+  \begin{center}
+  \includegraphics[scale=0.6]{images/header485.PNG}
+  \caption{Master: Header for module RS-485 of Master}
+  \label{fig:header485Full}
+  \end{center}
+\end{figure}
+\begin{figure}[!ht]
+  \begin{center}
+  \includegraphics[scale=0.7]{images/masterLeft.PNG}
+  \caption{Master: Header for other modules}
+  \label{fig:masterLeftFull}
+  \end{center}
+\end{figure}
+\begin{figure}[!ht]
+  \begin{center}
+  \includegraphics[scale=0.7]{images/slaveButtonFull.PNG}
+  \caption{Slave Button(s)}
+  \label{fig:slaveButtonFull}
+  \end{center}
+\end{figure}
+\begin{figure}[!htbp]
+  \begin{center}
+  \includegraphics[scale=0.7]{images/slaveRelayFull1.PNG}
+  \caption{Slave Relay(1)}
+  \label{fig:slaveRelayFull1}
+  \end{center}
+\end{figure}
+\begin{figure}[!ht]
+  \begin{center}
+  \includegraphics[scale=1]{images/slaveRelayFull2.PNG}
+  \caption{Slave Relay(2)}
+  \label{fig:slaveRelayFull2}
+  \end{center}
+\end{figure}

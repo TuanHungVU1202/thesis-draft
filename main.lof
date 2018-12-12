@@ -27,6 +27,14 @@
 \contentsline {figure}{\numberline {3.19}{\ignorespaces Raspberry Pi 3 Model B}}{22}{figure.3.19}
 \contentsline {figure}{\numberline {3.20}{\ignorespaces Raspberry Pi Camera Module}}{23}{figure.3.20}
 \contentsline {figure}{\numberline {3.21}{\ignorespaces Raspberry Pi Connected with PiCamera Module}}{24}{figure.3.21}
+\contentsline {figure}{\numberline {3.22}{\ignorespaces Full Schematic of Power for Master}}{25}{figure.3.22}
+\contentsline {figure}{\numberline {3.23}{\ignorespaces Header for STM32F4 Discovery Kit}}{26}{figure.3.23}
+\contentsline {figure}{\numberline {3.24}{\ignorespaces Master: Header for module RS-485 of Master}}{26}{figure.3.24}
+\contentsline {figure}{\numberline {3.25}{\ignorespaces Master: Header for other modules}}{27}{figure.3.25}
+\contentsline {figure}{\numberline {3.26}{\ignorespaces Slave Button(s)}}{27}{figure.3.26}
+\contentsline {figure}{\numberline {3.27}{\ignorespaces Slave Relay(1)}}{28}{figure.3.27}
+\contentsline {figure}{\numberline {3.28}{\ignorespaces Slave Relay(2)}}{29}{figure.3.28}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces System Block Diagram}}{32}{figure.4.1}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
