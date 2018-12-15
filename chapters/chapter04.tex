@@ -8,13 +8,13 @@
     \subsubsection{Bedroom}
     Last room of the house is Bedroom, in which is assumed to have two devices but one is integrated on the same circuit with Dining Room Light, the other is the Conditioner is also integrated on the same circuit with the Living Room Light.
 
-    Apart from controlling the devices by physical Slave Button(s), which is also crossed implemented with no specific rule, the owner also can control the devices with a single Internet-connected device such as a smartphone, a tablet or a computer by accessing the Application Server from anywhere and anytime. Besides, it also has few scenarios that should be quite helpful for the owner. Imagine that when the owner arrive home after work, the devices needed are ready to serve such as the Front Light or the Conditioner. The project is also implemented with security camera block which helps user to access, monitor their house and receive alert in case of abnormal event happens in a convenient way with reasonable price. In addition, all data in the process of monitoring the house should be sent to a database, which helps the user and also engineer can keep track of the activities of devices in the house, then use the collected data to improve the experiences of the users in the future.
+    Apart from controlling the devices by physical Slave Button(s), which is also crossed implemented with no specific rule, the owner also can control the devices with a single Internet-connected device such as a smartphone, a tablet or a computer by accessing the Web Server from anywhere and anytime. Besides, it also has few scenarios that should be quite helpful for the owner. Imagine that when the owner arrive home after work, the devices needed are ready to serve such as the Front Light or the Conditioner. The project is also implemented with security camera block which helps user to access, monitor their house and receive alert in case of abnormal event happens in a convenient way with reasonable price. In addition, all data in the process of monitoring the house should be sent to a database, which helps the user and also engineer can keep track of the activities of devices in the house, then use the collected data to improve the experiences of the users in the future.
 
     \subsection{Block Diagram}
 
     \begin{figure}[!htp]
         \begin{center}
-        \includegraphics[scale=0.6]{images/blockDiagram.PNG}
+        \includegraphics[scale=0.55]{images/systemFullBlock.PNG}
         \caption{System Block Diagram}
         \label{fig:blockDiagram}
         \end{center}
@@ -29,8 +29,9 @@
     \subsubsection{Slave Button(s)}
     Slave Button(s) (Slave \#4-8) consists of number of Buttons (varies depends on users’ needs) and one PIC16F628A from Microchip as the MCU, responsible for controlling Slave Relay(s) by sending the commands to Master for the distribution to corresponding Slave Relay(s).
     \subsubsection{Internet Application Block}
-    Internet Application block consists of smaller blocks with different functions, namely Database, Application Server, Internet connection block, Security Camera and Smart devices. Internet block establish the Internet connection for Master block; Application Server is the combination of back-end and front-end development of Webserver, besides helping users to control the system remotely with ease, the extended features will be explained later in this chapter; Security Camera responsible for recognizing person with Facial Recognition to open the door in order to cut off the steps of accessing the house. In addition, security camera is also integrated with motion detector prototype directly in Application Server.
-    \subsection{Communication Methodology and Algorithm}
+    Internet Application block consists of smaller blocks with different functions, namely Database, Web Server, Internet connection block, Security Camera and Smart devices. Internet block establish the Internet connection for Master block; Web Server is the combination of back-end and front-end development of Webserver, besides helping users to control the system remotely with ease, the extended features will be explained later in this chapter; Security Camera responsible for recognizing person with Facial Recognition to open the door in order to cut off the steps of accessing the house. In addition, security camera is also integrated with motion detector prototype directly in Web Server. The Web Server communicates with the system through Internet block using MQTT protocol.
+
+    \section{Communication Methodology and Algorithm of Master and Slaves}
     In this thesis, data is transmitted from UART of MCU to input of module RS-485 then to the data bus wire to distribute to corresponded components, noted that RS-485 is the physical standard which helps transmitted data travels much further compared to original UART. It needs two wires for data transmitting with module RS-485, but a cable of four wires is chosen for providing power supply of 12VDC and transmitting data at the same time with a single cable. Four wires in a cable with corresponded functions are listed as following.
     \begin{itemize}
     \item 12V: provide 12VDC throughout the system.
@@ -44,11 +45,164 @@
     \begin{itemize}
     \item \textbf{Master}: Master responsible for asking sequentially every connected Slaves in the system. After asking the Slaves for if they need to work, Master will delay for a small amount of time to wait for the response from Slaves. If the time is passed and asked Slave does not request to work, Master will pass that Slave and move on the next Slave. If a Slave Button is being asked but also receive the external signal, it can interrupt the process by sending a response to Master requesting to work, then that request will be prior to be sent to corresponded Slave Device. Now it ends the loop and start a new one. Period of time to ask the Slaves must be in milliseconds in order to complete the loop for every Slaves in the system.
     \item \textbf{Slave Button}: Slave Button has to wait for Master to ask and response. It is always stay in receiving mode (which has enable pin logic at 0 – LOW). When Slave Button is asked or an external signal comes in, it pulls enable pin to logic 1-HIGH to enter transmitting mode and response when Master asks.
-    \item \textbf{SLave Device}: Enable pin of RS-485 of Slave Device is always in LOW status, which means receiving data mode. When Master ask or there is data transmitted from Slave Button, Slave Device will check if it is corresponded with its functions, if yes Slave Device will work as defined function.
+    \item \textbf{Slave Device}: Enable pin of RS-485 of Slave Device is always in LOW status, which means receiving data mode. When Master ask or there is data transmitted from Slave Button, Slave Device will check if it is corresponded with its functions, if yes Slave Device will work as defined function.
     \end{itemize}
     
     With this algorithm, the asking loops will run continuously, and it should prevent two signal collide with one and another because the Slave only answers Master when Master asks. However, transmitted data will be difficult to be managed because of two reasons, waiting time and management. After a request is sent from Master, it takes some time for Master to wait for the response from Slave and pull enable pin of RS-485 to LOW. Besides, it takes times again to pull enable pin up to logic HIGH to distribute the response if available. This process is getting longer with the increment of the number of Slaves, which cause the transmission between Slaves become slower with a large number of Slaves. Furthermore, transmitting data continuously will consume loads of bandwidth leads to resource waste and cause errors dues to noise or inaccurate process from Slaves because of data is transmitted continuously leads to false data or worse is lose data. Thus, the author chose a different method to transmit data through the network based on CSMA/CD protocol.
-    
+
+\subsubsection{Work sequentially}
+Based on the idea of CSMA/CD protocol, which is “Carrier-sense multiple access with collision detection”. It is explained briefly as if a node need to transmit data, it has to listen if the connection is busy or not. In the case the connection is idle, frame is transmitted, if not, that node has to wait a random time then start to listen again. In order to detect collision, transmitting node has to listen to the connection while transmitting data. If a collision is detected, that node has to stop transmitting and send a jam signal to others station while waiting a random time to start sending frame again.
+In this thesis, the algorithm is built based on the working principle of CSMA/CD and Master-Slave model.
+    \begin{itemize}
+    \item \textbf{Master}: Master is the most important node in the network. After the system is booted up, Master will be ready and waiting for the transmission. The author could not complete the idea to set an identity for a new Slave entering the network, therefore, all identity will be pre-programmed and managed by the Master. Master now responsible as a middleman, receiving and distributing frames between Slaves in the network. Whenever a Slave Button send a frame to control assigned Slave Relay, Master will receive the frame then distributed to corresponding Slave Relay without a direct connection between any Slaves. With all the process, Master will pull up RS-485 to 1-HIGH when transmitting frame or pull down to 0-LOW (as default) when receiving frame.
+    \item \textbf{Slave Button}: Slave Button will be in receiving mode (enable pin of RS-485 is 0-LOW) after booting up. When a button is pressed, it will pull up enable pin of RS-485 to 1-HIGH and send corresponding frame to Master for the distribution to the correct Slave Relay with corresponding identity. Then it returns to receiving mode to wait for the interruption again.
+    \item \textbf{Slave Device}: Enable pin of RS-485 of Slave Device is always in LOW status, which means receiving data mode. When there is data transmitted from Slave Button, Slave Device will check if it is corresponded with its functions, if yes Slave Device will work as defined function.
+    \end{itemize}
+
+With this algorithm, Master will update Slave status after booting up, then Master and Slaves enter receiving mode to listen to transmission. It is an improvement in processing time and management compared to the previous algorithm. To be specific, frames are not transmitted relentlessly which saves large amount of resources and the delay is almost unnoticeable, this leads to the project can be extended to a number of slaves without much delays. Furthermore, the transmission is free in default, thus minimizes the chance that there will be two frame on the connection at the exact same time, this helps the frame is transmitted correctly with small probability that a collision is happened.
+
+\subsection{Transmitting Frame Design}
+    \subsubsection{Master to Slave Relays}
+    In this thesis, a standard transmitting frame consists of 11 bytes as following.
+
+    \begin{center}
+    S$X_1$$X_2$$X_3$$X_4$$X_5$$X_6$$X_7$$X_8$$X_9$E
+    \end{center}
+
+    \textit{Explanation}:
+    \begin{itemize}
+        \item S: For recognition that a Frame is being transmitted.
+        \item $X_1$: For recognition that the Master is transmitting to a Slave or vice versa. For instance, $X_1$=1 is Master transmits to Slave and $X_1$=0 is Slave transmits to Master.
+        \item $X_2$: Byte for defined function. In this thesis, $X_2$=0 is the command controlling assigned Relay with a defined Button. $X_2$ has range from 0 to 9, which means the functions for the project can be extended up to 10 functions if necessary. 
+        \item $X_3$$X_4$$X_5$: Bytes define identity of each component on Slave Relays or Slave Buttons. For instance, D01 is Relay number 1 (integrated on Slave-3-Relays in this thesis) or B02 is Button number 2 (integrated on Slave-3-Buttons in this thesis).
+        \item $X_9$: Byte defines state of the device on Slave Relay which is being controlled. For instance, $X_9$=1 is “Turn device On” and $X_9$=0 is “Turn device Off”.
+        \item $X_6$$X_7$$X_8$: Bytes that are reserved for further development.
+        \end{itemize}
+
+    \subsubsection{Slave Button to Master frames}
+    Frame from Slave Buttons to Master is slightly different from frames from Master to Slave Relays.
+
+        \begin{center}
+        S$X_1$$X_2$$X_3$$X_4$$X_5$$X_6$$X_7$$X_8$$X_9$E
+        \end{center}
+
+    \textit{Explanation}:
+    \begin{itemize}
+    \item S: For recognition that a Frame is being transmitted.
+    \item $X_1$: For recognition that the Master is transmitting to a Slave or vice versa. For instance, $X_1$=1 is Master transmits to Slave and $X_1$=0 is Slave transmits to Master.
+    \item $X_2$: Byte for defined function. In this thesis, $X_2$=0 is the command controlling assigned Relay with a defined Button. $X_2$ has range from 0 to 9, which means the functions for the project can be extended up to 10 functions if necessary. 
+    \item $X_3$$X_4$$X_5$: Bytes define identity of each Button on Slave Button. For instance, B01 is Button number 1 (integrated on Slave-3-Buttons in this thesis) or B04 is Button number 4 (integrated on Slave-2-Buttons in this thesis).
+    \item $X_6$$X_7$$X_8$: Bytes define identity of each Relay on Slave Relays, which is the part to identify which Relay the Button needs to control. For instance, D01 is Relay number 1 (integrated on Slave-3-Relays in this thesis) or D02 is Relay number 2 (integrated on Slave-3-Relays in this thesis).
+    \item $X_9$: Byte defines state of the device on Slave Relay which is being controlled. For instance, $X_9$=1 is “Turn device On” and $X_9$=0 is “Turn device Off”.
+    \end{itemize}
+
+    \begin{figure}[!h]
+        \begin{center}
+        \includegraphics[scale=0.75]{images/frameEx.png}
+        \caption{Example of transmitting frames}
+        \label{fig:frameEx}
+        \end{center}
+    \end{figure}
+
+    In particular, Figure~\ref{fig:frameEx} shows an example of frames transmitting in the system with the explanation above. The case of Slave Button 1 sends the frame of \textbf{S00 B02 D02 1 E} and Master sends a frame of \textbf{S10 D02 000 1 E} to Slave Relay 2 is explained in detail as following.
+    \begin{itemize}
+        \item S: For recognition that a Frame is being transmitted.
+        \item $X_1$ = 0 indicates Slave Button 1 is sending to Master.
+        \item $X_2$ = 0 indicates Slave Button 1 wants to control a Relay with the identity as of bytes $X_6$$X_7$$X_8$.
+        \item $X_3$$X_4$$X_5$ = B02 indicates Button number 2 is controlling.
+        \item $X_6$$X_7$$X_8$ = D02 indicates Button number 2 is controlling Relay number 2.
+        \item $X_9$ = 1 is “Turn device On”.
+    \end{itemize}
+
+    \subsection{Working flowchart of Master and Slaves}
+    In this section, the author shows the flowcharts of programs that are embedded in Master and Slaves. Each flowchart has a description below corresponding to its design. For instance, figure~\ref{fig:masterFlow}, figure~\ref{fig:buttonFlow} and figure~\ref{fig:relayFlow} indicates working principle of Master, Slave Button and Slave Relays, respectively.
+    \begin{figure}[!htbp]
+        \begin{center}
+        \includegraphics[scale=0.75]{images/masterFlow.png}
+        \caption{Flowchart of Master}
+        \label{fig:masterFlow}
+        \end{center}
+    \end{figure}
+    \begin{figure}[!htb]
+        \begin{center}
+        \includegraphics[scale=0.55]{images/buttonFlow.png}
+        \caption{Flowchart of Slave Button}
+        \label{fig:buttonFlow}
+        \end{center}
+    \end{figure}
+    \begin{figure}[!htb]
+        \begin{center}
+        \includegraphics[scale=0.55]{images/relayFlow.png}
+        \caption{Flowchart of Slave Relay}
+        \label{fig:relayFlow}
+        \end{center}
+    \end{figure}
+
+\newpage
+\section{Internet Application Block Design}
+Nowadays, Internet connection with its applications is the must have function for any smart system. This thesis is not fully implemented with Internet applications but the author chose the basic function that can support any user to live and control their house in an effortless way.
+    \subsection{Internet Block} %esp8266
+    In this thesis, Internet Block helps the user interact with the system through Wi-Fi connection with module NodeMCU ESP-8266. Beside establishing a connection between the Web Server and the system, it also handles the processing data phase in order to send a frame to Master.
+        \subsubsection{MQTT Protocol}
+        As for the connection between NodeMCU ESP-8266 and the Web Server, the author use MQTT protocol instead of HTTP. MQTT is an extremely lightweight protocol, designed for constrained devices. The topics for are designed with multiple levels to suits with the control methodology. For instance, NodeMCU is assigned as a client, which subscribes to the topic as shown in Figure~\ref{fig:espSub}.
+        \begin{figure}[!htb]
+            \begin{center}
+            \includegraphics[scale=0.9]{images/espSub.png}
+            \caption{Topics subscribed by NodeMCU}
+            \label{fig:espSub}
+            \end{center}
+        \end{figure}
+
+        \begin{figure}[!htbp]
+            \begin{center}
+            \includegraphics[scale=0.65]{images/mqttFlow.png}
+            \caption{Flowchart of working principle of NodeMCU}
+            \label{fig:mqttFlow}
+            \end{center}
+        \end{figure}
+        In order to process the received data from Web Server, the author embedded a simple program for NodeMCU and Figure~\ref{fig:mqttFlow} illustrates its working principle.
+
+    \subsection{Web Server}
+    Web Server is the combination of Back-end and Front-end Design. To be specific, Back-end is the core for a Web Server which handles the logic and working flow of all components, Front-end is responsible for displaying the results of back-end processes and components to interacts. The author use Node.js for Back-end design and HTML, CSS for Front-end design.
+        \subsubsection{Back-End Design}
+        Node.js works on non-blocking I/O principle which makes it suitable for real-time applications included a real-time Web Server. Node.js empowers real-time web application by adopting push technology as against web sockets to build server-side web applications with two-way channel i.e. client and server. It operates on open web stack technologies like JavaScript, CSS, and HTML that work over the standard port 80. This tool is also lightweight both for in-memory usage and data dense real-time web applications that work on multiple devices. Figure~\ref{fig:nonBlocking} refers the working principle of Node.js in order to show its advantages for the Web Server in this Thesis.
+        \begin{figure}[!htb]
+            \begin{center}
+            \includegraphics[scale=0.65]{images/nonBlocking.png}
+            \caption{Node.js Working Principle}
+            \label{fig:nonBlocking}
+            \end{center}
+        \end{figure}
+
+        Server-side is also implemented with MQTT protocol to communicate with other nodes in the network to control the system. In this thesis, the MQTT broker is written in Node.js using a module named Mosca, which makes a local and private Broker to implement MQTT protocol on. Figure~\ref{fig:webSub} shows the subscription of the Web Server to those topics which are in use of the Thesis.
+        \begin{figure}[!htb]
+            \begin{center}
+            \includegraphics[scale=0.9]{images/webSub.png}
+            \caption{Topics subscribed by Web Server}
+            \label{fig:webSub}
+            \end{center}
+        \end{figure}
+
+        In the Web Server, the author used both POST and GET methods in an appropriate way to ensure the sensitive information will not be exposed. For instance, the author used POST method for Log in information at Log in Page in order to make the information is not queried in the URL and GET method for getting page response to the Client.
+
+        Because Web Server is an asynchronous application, it returns response to client whenever it receives a request from Client-side. The figure~\ref{fig:responseBlock} illustrates the flowchart of every function blocks are implemented in this thesis that returns the corresponding response to Client-side.
+        \begin{figure}[!htb]
+            \begin{center}
+            \includegraphics[scale=0.8]{images/webSub.png}
+            \caption{Flowchart of each function blocks in Web Server}
+            \label{fig:responseBlock}
+            \end{center}
+        \end{figure}
+
+        \subsubsection{Front-End Design}
+    \subsection{Database} 
+    \subsection{Security Camera Block}
+        \subsubsection{Facial Recognition}
+        \subsubsection{Motion Detection}
+
+        
+
+
 
 
 
