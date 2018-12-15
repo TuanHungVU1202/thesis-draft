@@ -174,10 +174,10 @@ Nowadays, Internet connection with its applications is the must have function fo
             \end{center}
         \end{figure}
 
-        Server-side is also implemented with MQTT protocol to communicate with other nodes in the network to control the system. In this thesis, the MQTT broker is written in Node.js using a module named Mosca, which makes a local and private Broker to implement MQTT protocol on. Figure~\ref{fig:webSub} shows the subscription of the Web Server to those topics which are in use of the Thesis.
+        Server-side is implemented on port 2111 with MQTT protocol to communicate with other nodes in the network to control the system. In this thesis, the MQTT broker is running on port 3000 and written in Node.js using a module named Mosca, which makes a local and private Broker to implement MQTT protocol on. Figure~\ref{fig:webSub} shows the subscription of the Web Server to those topics which are in use of the Thesis.
         \begin{figure}[!htb]
             \begin{center}
-            \includegraphics[scale=0.9]{images/webSub.png}
+            \includegraphics[scale=1]{images/webSub.png}
             \caption{Topics subscribed by Web Server}
             \label{fig:webSub}
             \end{center}
@@ -185,7 +185,14 @@ Nowadays, Internet connection with its applications is the must have function fo
 
         In the Web Server, the author used both POST and GET methods in an appropriate way to ensure the sensitive information will not be exposed. For instance, the author used POST method for Log in information at Log in Page in order to make the information is not queried in the URL and GET method for getting page response to the Client.
 
-        Because Web Server is an asynchronous application, it returns response to client whenever it receives a request from Client-side. The figure~\ref{fig:responseBlock} illustrates the flowchart of every function blocks are implemented in this thesis that returns the corresponding response to Client-side.
+        Because Web Server is an asynchronous application, it returns response to client whenever it receives a request from Client-side. After a successful log in session from the authorized person from the family, which means a default request is sent to Server-side to load the next page, Web Server is divided into four main pages corresponded to four function blocks, namely Dashboard, Control, Scenario and Indoor Security Camera. The activities of the devices will be logged into a Database, which helps to back up the data to monitor and should be used for future development. The figure~\ref{fig:responseBlock} illustrates the flowchart of every function blocks are implemented in this thesis that returns the corresponding response to Client-side.
+        \begin{itemize}
+            \item Dashboard: in this thesis, Dashboard page shows the overview of the system, namely the Sensor value (in the event a Slave Sensor is implemented) and Security Status of the Indoor Security Camera. Each component on this page will automatically retrieve the value from the Database, which is logged from the system in prior, and display for users with Front-end design.
+            \item Control: Control page consists of the Button which help users to control devices on Slave Relay without pressing the physical buttons on Slave Buttons. This page is implemented with MQTT protocol to send command to the system and to receive state update from the system. Besides, a connection to the Database is also opened in order to log devices’ activities to monitor, maintain and develop in the future.
+            \item Scenes: This page is implemented with four scenarios, namely Good Morning, I’m Home, Good Night and Security. The idea for this page is use the defined Scenarios to switch number of device On or Off in order to reduce the control time in similar circumstances. This page is also implemented with MQTT and a connection to Database to work as the same as Control Page.
+            \item Indoor Security Camera: This page is a prototype implemented with Motion Detector using integrated WebCam of the computer. When the owner leaves the house, this function should be turned on and will be ready to detect the strange motion in an ideal condition that the house does not have any person or pet at home. If a motion is detected, it will send alert to the owner over Email and in further development should be text messages over cellular network. It is also implemented with a connection to the Database to log the data in case of use in the future.
+            \end{itemize}
+            
         \begin{figure}[!htb]
             \begin{center}
             \includegraphics[scale=0.8]{images/webSub.png}
