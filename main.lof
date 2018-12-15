@@ -44,6 +44,12 @@
 \contentsline {figure}{\numberline {4.7}{\ignorespaces Flowchart of working principle of NodeMCU}}{41}{figure.4.7}
 \contentsline {figure}{\numberline {4.8}{\ignorespaces Node.js Working Principle}}{42}{figure.4.8}
 \contentsline {figure}{\numberline {4.9}{\ignorespaces Topics subscribed by Web Server}}{43}{figure.4.9}
-\contentsline {figure}{\numberline {4.10}{\ignorespaces Flowchart of each function blocks in Web Server}}{44}{figure.4.10}
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Control messages shown as Buffer Payload in corresponded topic}}{44}{figure.4.10}
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Flowchart of each function blocks in Web Server}}{45}{figure.4.11}
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Flowchart of Indoor Security Camera}}{46}{figure.4.12}
+\contentsline {figure}{\numberline {4.13}{\ignorespaces Data of collection Floor1}}{47}{figure.4.13}
+\contentsline {figure}{\numberline {4.14}{\ignorespaces Data of collection logDeviceActivities}}{47}{figure.4.14}
+\contentsline {figure}{\numberline {4.15}{\ignorespaces Data of collection logFaceDetection}}{48}{figure.4.15}
+\contentsline {figure}{\numberline {4.16}{\ignorespaces Data of collection logMotion}}{48}{figure.4.16}
 \addvspace {10\p@ }
 \addvspace {10\p@ }

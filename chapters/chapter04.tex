@@ -188,24 +188,74 @@ Nowadays, Internet connection with its applications is the must have function fo
         Because Web Server is an asynchronous application, it returns response to client whenever it receives a request from Client-side. After a successful log in session from the authorized person from the family, which means a default request is sent to Server-side to load the next page, Web Server is divided into four main pages corresponded to four function blocks, namely Dashboard, Control, Scenario and Indoor Security Camera. The activities of the devices will be logged into a Database, which helps to back up the data to monitor and should be used for future development. The figure~\ref{fig:responseBlock} illustrates the flowchart of every function blocks are implemented in this thesis that returns the corresponding response to Client-side.
         \begin{itemize}
             \item Dashboard: in this thesis, Dashboard page shows the overview of the system, namely the Sensor value (in the event a Slave Sensor is implemented) and Security Status of the Indoor Security Camera. Each component on this page will automatically retrieve the value from the Database, which is logged from the system in prior, and display for users with Front-end design.
-            \item Control: Control page consists of the Button which help users to control devices on Slave Relay without pressing the physical buttons on Slave Buttons. This page is implemented with MQTT protocol to send command to the system and to receive state update from the system. Besides, a connection to the Database is also opened in order to log devices’ activities to monitor, maintain and develop in the future.
+            \item Control: Control page consists of the Button which help users to control devices on Slave Relay without pressing the physical buttons on Slave Buttons. This page is implemented with MQTT protocol to send command to the system and to receive state update from the system. Besides, a connection to the Database is also opened in order to log devices’ activities to monitor, maintain and develop in the future. The payload of the control message which is sent to corresponded topics is shown in the figure~\ref{fig:mqttPayload}. For instance, On is shown as “Buffer 6f 6e” and Off is “Buffer 6f 66 66”.
             \item Scenes: This page is implemented with four scenarios, namely Good Morning, I’m Home, Good Night and Security. The idea for this page is use the defined Scenarios to switch number of device On or Off in order to reduce the control time in similar circumstances. This page is also implemented with MQTT and a connection to Database to work as the same as Control Page.
-            \item Indoor Security Camera: This page is a prototype implemented with Motion Detector using integrated WebCam of the computer. When the owner leaves the house, this function should be turned on and will be ready to detect the strange motion in an ideal condition that the house does not have any person or pet at home. If a motion is detected, it will send alert to the owner over Email and in further development should be text messages over cellular network. It is also implemented with a connection to the Database to log the data in case of use in the future.
+            \item Indoor Security Camera: This page is a prototype implemented with Motion Detector using integrated WebCam of the computer. When the owner leaves the house, this function should be turned on and will be ready to detect the strange motion in an ideal condition that the house does not have any person or pet at home. If a motion is detected, it will send alert to the owner over Email and alert messages in all Pages if the Web Server is currently accessed by an authorized user, or in further development should be text messages over cellular network. It is also implemented with a connection to the Database to log the data in case of use in the future. The motion detection algorithm is done on Client-side, Server-side is responsible for receiving post-process data to raise alert in the event of strange motion occurs.
             \end{itemize}
-            
+
         \begin{figure}[!htb]
             \begin{center}
-            \includegraphics[scale=0.8]{images/webSub.png}
+            \includegraphics[scale=1.5]{images/mqttPayload.png}
+            \caption{Control messages shown as Buffer Payload in corresponded topic}
+            \label{fig:mqttPayload}
+            \end{center}
+        \end{figure}
+        \begin{figure}[!htb]
+            \begin{center}
+            \includegraphics[scale=0.53]{images/responseBlock.png}
             \caption{Flowchart of each function blocks in Web Server}
             \label{fig:responseBlock}
             \end{center}
         \end{figure}
 
+        \newpage
         \subsubsection{Front-End Design}
-    \subsection{Database} 
+        Front-end design is the combination of languages, namely Javascript, HTML5 and CSS. With Node.js, the author is able to write both back-end and front-end in Javascript, which helps reduce plenty of time. Front-end design particularly means design the \gls{hmi} and the communication between Client-side and Server-side with Ajax technique, tools and libraries, namely jQuery, Bootstrap or Socket.io, which should help end-user interact with the application in an effortless way. The result of HMI will be shown in Chapter \ref{result}. Besides, Motion detection algorithm is shown as in figure~\ref{fig:motionFlow} and it is done in Client-side.
+        \begin{figure}[!h]
+            \begin{center}
+            \includegraphics[scale=0.45]{images/motionFlow.png}
+            \caption{Flowchart of Indoor Security Camera}
+            \label{fig:motionFlow}
+            \end{center}
+        \end{figure}
+
+    \subsection{Database}
+    Database is a collection of data, create and managed in relational or non-relational way. In this thesis, the author chose MongoDB, a non-relational database. The database works similar to an electronic warehouse where data is organized and kept in categories and value by using key/value pair. To be specific, MongoDB stores data in BSON file, which is similar to JSON format, therefore easy to manipulate the stored data.
+
+    In this thesis, the author organizes data with four collections, namely floor1, logDeviceActivities, logFaceDetection and logMotion. Each collection responsible for logging corresponding data. To be specific, floor1 stores all devices in houses with their id, name and state. In addition, logDeviceActivities, logFaceDetection and logMotion have timestamp in details to identify the time of any interaction with the house and its devices. Furthermore, logDeviceActivities and logFaceDetection also show deviceId with its State and person who accessed with the permission at the same time, respectively. Please see the figure~\ref{fig:floor1}, figure~\ref{fig:logDevice}, figure~\ref{fig:logFace} and figure~\ref{fig:logMotion} for the key/value pair of each collections.
+    \begin{figure}[!ht]
+        \begin{center}
+        \includegraphics[scale=0.8]{images/floor1.png}
+        \caption{Data of collection Floor1}
+        \label{fig:floor1}
+        \end{center}
+    \end{figure}
+    \begin{figure}[!ht]
+        \begin{center}
+        \includegraphics[scale=0.55]{images/logDevice.png}
+        \caption{Data of collection logDeviceActivities}
+        \label{fig:logDevice}
+        \end{center}
+    \end{figure}
+    \begin{figure}[!ht]
+        \begin{center}
+        \includegraphics[scale=0.55]{images/logFace.png}
+        \caption{Data of collection logFaceDetection}
+        \label{fig:logFace}
+        \end{center}
+    \end{figure}
+    \begin{figure}[!ht]
+        \begin{center}
+        \includegraphics[scale=0.55]{images/logMotion.png}
+        \caption{Data of collection logMotion}
+        \label{fig:logMotion}
+        \end{center}
+    \end{figure}
+ 
     \subsection{Security Camera Block}
-        \subsubsection{Facial Recognition}
-        \subsubsection{Motion Detection}
+    Security Camera Block is implemented in the minicomputer named Raspberry Pi 3 Model B. The programme is written in python and implemented with OpenCV for Facial Recognition, in which OpenCV is a library aimed at real-time computer vision projects. Raspberry Pi 3 is installed with Raspbian OS and attached PiCamera Module via CSI port. With the help of OpenCV, the author is able to implemented a real-time facial recognition system with acceptable results. Because it is implemented in Raspberry Pi, the security camera block is capable of running full time when setup at front door with a power supply and a small monitor. Because the author is limited in resource, the Raspberry Pi screen will be displayed directly on laptop with a software for demonstration.
+
+
 
         
 
