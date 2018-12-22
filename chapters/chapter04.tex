@@ -255,6 +255,42 @@ Nowadays, Internet connection with its applications is the must have function fo
     \subsection{Security Camera Block}
     Security Camera Block is implemented in the minicomputer named Raspberry Pi 3 Model B. The programme is written in python and implemented with OpenCV for Facial Recognition, in which OpenCV is a library aimed at real-time computer vision projects. Raspberry Pi 3 is installed with Raspbian OS and attached PiCamera Module via CSI port. With the help of OpenCV, the author is able to implemented a real-time facial recognition system with acceptable results. Because it is implemented in Raspberry Pi, the security camera block is capable of running full time when setup at front door with a power supply and a small monitor. Because the author is limited in resource, the Raspberry Pi screen will be displayed directly on laptop with a software for demonstration.
 
+    The programme running on Raspberry Pi is designed with a simple HMI, in which user can interact by virtual buttons on it. The functions of each button is described as following.
+    \begin{itemize}
+        \item Start Face Recognition: Run Facial Recognition, if recognized, the Main Door is automatically open by publishing a message to topic \textit{toEsp/control/device/3} of MQTT protocol. The data to be published is the returned value of \textit{global\_id} as refers in last step of Recognition step from Figure~\ref{fig:recognize}.
+        \item Close Door: After the Door is opened, user can close the it on the screen with this virtual Button, without using a physical button or the Web Server.
+        \item RESTART: restart the software in Raspberry Pi if needed without using lines of command, which suits for an user.
+        \item Log in as ADMIN!: is used to log into the system with the correct password. This button is useful when the user wants to add more data of allowed people into the dataset. After logged in, a simple UI of Register function appears with two steps of “Register” and “Train data” as following  to prepare for the Facial Recognition in the main UI, which will be explained explicitly in the same section.
+            \begin{itemize}
+            \item Register: is data gathering step which capture and save the images into local storage, downscale and transform to lighten the load and reduce the processing time. Figure~\ref{fig:dataset} illustrates the working flow of Register function, which is used to gather data to train in next step. The parameters are mentioned in the aside notes in the flowchart has description as following. Gray is the input grayscale images in previous step, scaleFactor specifies how much the image should be reduced in size and minNeighboors is specifies how many neighbors each candidate rectangle should have, to retain it. A higher number gives lower false positives.
+            \item Train data: the step to feed the newly added faces from previous step for the face recognizer to train using LBPH algorithm, which is already built in OpenCV. Figure~\ref{fig:train} illustrates the training step of the recognizer.
+            \end{itemize}
+        \end{itemize}
+        \begin{figure}[!ht]
+            \begin{center}
+            \includegraphics[scale=0.5]{images/dataset.png}
+            \caption{Flowchart of Register step - Gathering dataset}
+            \label{fig:dataset}
+            \end{center}
+        \end{figure}
+        \begin{figure}[!ht]
+            \begin{center}
+            \includegraphics[scale=0.64]{images/train.png}
+            \caption{Flowchart of Train data step - Training from dataset}
+            \label{fig:train}
+            \end{center}
+        \end{figure}
+        \begin{figure}[!ht]
+            \begin{center}
+            \includegraphics[scale=0.65]{images/recognize.png}
+            \caption{Flowchart of Recognition step - Recognition from trained data}
+            \label{fig:recognize}
+            \end{center}
+        \end{figure}
+        
+        
+        
+    
 
 
         

@@ -51,5 +51,8 @@
 \contentsline {figure}{\numberline {4.14}{\ignorespaces Data of collection logDeviceActivities}}{47}{figure.4.14}
 \contentsline {figure}{\numberline {4.15}{\ignorespaces Data of collection logFaceDetection}}{48}{figure.4.15}
 \contentsline {figure}{\numberline {4.16}{\ignorespaces Data of collection logMotion}}{48}{figure.4.16}
+\contentsline {figure}{\numberline {4.17}{\ignorespaces Flowchart of Register step - Gathering dataset}}{50}{figure.4.17}
+\contentsline {figure}{\numberline {4.18}{\ignorespaces Flowchart of Train data step - Training from dataset}}{51}{figure.4.18}
+\contentsline {figure}{\numberline {4.19}{\ignorespaces Flowchart of Recognition step - Recognition from trained data}}{52}{figure.4.19}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
