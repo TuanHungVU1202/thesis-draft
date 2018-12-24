@@ -1,7 +1,6 @@
 \contentsline {chapter}{Contents}{iii}{chapter*.3}
 \contentsline {chapter}{List of Figures}{v}{chapter*.4}
 \contentsline {chapter}{List of Tables}{vii}{chapter*.5}
-\contentsline {chapter}{Acronym and Abbreviation}{viii}{section*.6}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Overview}{1}{section.1.1}
 \contentsline {section}{\numberline {1.2}Current Research}{2}{section.1.2}
@@ -26,8 +25,7 @@
 \contentsline {subsection}{\numberline {3.2.1}Microcontroller Requirements}{12}{subsection.3.2.1}
 \contentsline {subsection}{\numberline {3.2.2}Module RS-485}{14}{subsection.3.2.2}
 \contentsline {subsection}{\numberline {3.2.3}Module ESP-8266}{16}{subsection.3.2.3}
-\contentsline {subsection}{\numberline {3.2.4}Module SIM800A}{17}{subsection.3.2.4}
-\contentsline {subsection}{\numberline {3.2.5}Power for Master}{17}{subsection.3.2.5}
+\contentsline {subsection}{\numberline {3.2.4}Power for Master}{17}{subsection.3.2.4}
 \contentsline {section}{\numberline {3.3}Slave Design}{19}{section.3.3}
 \contentsline {subsection}{\numberline {3.3.1}Requirements}{19}{subsection.3.3.1}
 \contentsline {subsection}{\numberline {3.3.2}Power for Slaves}{20}{subsection.3.3.2}
@@ -40,27 +38,27 @@
 \contentsline {chapter}{\numberline {4}Algorithm and Software Design of The Project}{32}{chapter.4}
 \contentsline {section}{\numberline {4.1}Features explanation}{32}{section.4.1}
 \contentsline {subsection}{\numberline {4.1.1}Convenient control}{32}{subsection.4.1.1}
-\contentsline {subsubsection}{Living Room}{32}{section*.8}
-\contentsline {subsubsection}{Dining Room}{32}{section*.9}
-\contentsline {subsubsection}{Bedroom}{32}{section*.10}
+\contentsline {subsubsection}{Living Room}{32}{section*.6}
+\contentsline {subsubsection}{Dining Room}{32}{section*.7}
+\contentsline {subsubsection}{Bedroom}{32}{section*.8}
 \contentsline {subsection}{\numberline {4.1.2}Block Diagram}{33}{subsection.4.1.2}
-\contentsline {subsubsection}{Master}{33}{section*.11}
-\contentsline {subsubsection}{Slave Relay(s)}{33}{section*.12}
-\contentsline {subsubsection}{Slave Button(s)}{33}{section*.13}
-\contentsline {subsubsection}{Internet Application Block}{35}{section*.14}
+\contentsline {subsubsection}{Master}{33}{section*.9}
+\contentsline {subsubsection}{Slave Relay(s)}{33}{section*.10}
+\contentsline {subsubsection}{Slave Button(s)}{33}{section*.11}
+\contentsline {subsubsection}{Internet Application Block}{35}{section*.12}
 \contentsline {section}{\numberline {4.2}Communication Methodology and Algorithm of Master and Slaves}{35}{section.4.2}
-\contentsline {subsubsection}{Ask/Request sequentially}{35}{section*.15}
-\contentsline {subsubsection}{Work sequentially}{36}{section*.16}
+\contentsline {subsubsection}{Ask/Request sequentially}{35}{section*.13}
+\contentsline {subsubsection}{Work sequentially}{36}{section*.14}
 \contentsline {subsection}{\numberline {4.2.1}Transmitting Frame Design}{37}{subsection.4.2.1}
-\contentsline {subsubsection}{Master to Slave Relays}{37}{section*.17}
-\contentsline {subsubsection}{Slave Button to Master frames}{38}{section*.18}
+\contentsline {subsubsection}{Master to Slave Relays}{37}{section*.15}
+\contentsline {subsubsection}{Slave Button to Master frames}{38}{section*.16}
 \contentsline {subsection}{\numberline {4.2.2}Working flowchart of Master and Slaves}{39}{subsection.4.2.2}
 \contentsline {section}{\numberline {4.3}Internet Application Block Design}{42}{section.4.3}
 \contentsline {subsection}{\numberline {4.3.1}Internet Block}{42}{subsection.4.3.1}
-\contentsline {subsubsection}{MQTT Protocol}{42}{section*.19}
+\contentsline {subsubsection}{MQTT Protocol}{42}{section*.17}
 \contentsline {subsection}{\numberline {4.3.2}Web Server}{44}{subsection.4.3.2}
-\contentsline {subsubsection}{Back-End Design}{44}{section*.20}
-\contentsline {subsubsection}{Front-End Design}{47}{section*.21}
+\contentsline {subsubsection}{Back-End Design}{44}{section*.18}
+\contentsline {subsubsection}{Front-End Design}{47}{section*.19}
 \contentsline {subsection}{\numberline {4.3.3}Database}{49}{subsection.4.3.3}
 \contentsline {subsection}{\numberline {4.3.4}Security Camera Block}{50}{subsection.4.3.4}
 \contentsline {chapter}{\numberline {5}Experimental Results}{55}{chapter.5}
@@ -72,3 +70,4 @@
 \contentsline {section}{\numberline {6.1}Achievement}{69}{section.6.1}
 \contentsline {section}{\numberline {6.2}Limitation}{70}{section.6.2}
 \contentsline {section}{\numberline {6.3}Future Work}{70}{section.6.3}
+\contentsline {chapter}{Bibliography}{71}{chapter*.20}
